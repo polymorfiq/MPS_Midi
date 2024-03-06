@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1163670490218:jetbrains.mps.baseLanguage.structure.SwitchStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root>
+    <file name="FacetAspectDescriptor.java">
+      <unit at="8,0,18,0" name="Midi.make.plugin.FacetAspectDescriptor" />
+    </file>
+    <file name="FacetManifest.java">
+      <unit at="11,0,23,0" name="Midi.make.plugin.FacetManifest" />
+    </file>
+  </root>
+  <root nodeRef="r:d57ec6f4-72c8-44c1-a8bb-bc9cd0f1542a(Midi.make.plugin)/8945660651260522786">
+    <file name="FacetManifest.java">
+      <node id="8945660651260522786" at="13,26,14,67" concept="2" />
+    </file>
+    <file name="MakeMidi_Facet.java">
+      <node id="8945660651260522786" at="50,0,51,0" concept="3" trace="targets" />
+      <node id="8945660651260522786" at="51,0,52,0" concept="3" trace="name" />
+      <node id="8945660651030411685" at="52,27,53,75" concept="2" />
+      <node id="8945660651260522786" at="55,38,56,19" concept="8" />
+      <node id="8945660651260522786" at="58,43,59,16" concept="8" />
+      <node id="8945660651260522786" at="61,43,62,104" concept="8" />
+      <node id="8945660651260522786" at="64,43,65,16" concept="8" />
+      <node id="8945660651260522786" at="67,32,68,21" concept="8" />
+      <node id="8945660651260522786" at="70,57,71,34" concept="8" />
+      <node id="8945660651030411685" at="74,0,75,0" concept="10" trace="name" />
+      <node id="8945660651030411687" at="80,173,81,55" concept="7" />
+      <node id="8945660651030411687" at="81,55,82,86" concept="7" />
+      <node id="8945660651104211199" at="84,19,85,90" concept="7" />
+      <node id="8945660651114119287" at="85,90,86,0" concept="9" />
+      <node id="8945660651114128992" at="86,0,87,133" concept="2" />
+      <node id="8945660651104229808" at="87,133,88,0" concept="9" />
+      <node id="8945660651101202513" at="89,77,90,112" concept="7" />
+      <node id="8945660651102622532" at="90,112,91,0" concept="9" />
+      <node id="8945660651102629562" at="91,0,92,70" concept="7" />
+      <node id="8945660651102585546" at="92,70,93,85" concept="7" />
+      <node id="8945660651102594265" at="94,68,95,102" concept="2" />
+      <node id="8945660651244627826" at="95,102,96,0" concept="9" />
+      <node id="8945660651244575436" at="97,23,98,71" concept="2" />
+      <node id="8945660651244655258" at="99,45,100,157" concept="2" />
+      <node id="8945660651244226895" at="102,17,103,0" concept="9" />
+      <node id="8945660651104246092" at="106,113,107,98" concept="7" />
+      <node id="8945660651105371191" at="107,98,108,0" concept="9" />
+      <node id="8945660651099554822" at="109,23,110,98" concept="7" />
+      <node id="8945660651099554822" at="110,98,111,104" concept="7" />
+      <node id="8945660651099554822" at="111,104,112,93" concept="7" />
+      <node id="8945660651099644522" at="112,93,113,134" concept="7" />
+      <node id="8945660651103216646" at="115,31,116,135" concept="7" />
+      <node id="8945660651244375081" at="116,135,117,0" concept="9" />
+      <node id="8945660651101852130" at="117,0,118,96" concept="7" />
+      <node id="8945660651245201328" at="118,96,119,0" concept="9" />
+      <node id="8945660651245077106" at="120,33,121,107" concept="2" />
+      <node id="8945660651102393971" at="122,53,123,142" concept="2" />
+      <node id="8945660651102432490" at="124,29,125,0" concept="9" />
+      <node id="8945660651102437056" at="125,0,126,43" concept="2" />
+      <node id="8945660651102460961" at="126,43,127,43" concept="2" />
+      <node id="8945660651104528085" at="127,43,128,0" concept="9" />
+      <node id="8945660651104547153" at="128,0,129,74" concept="7" />
+      <node id="8945660651104412521" at="129,74,130,78" concept="2" />
+      <node id="8945660651104740692" at="130,78,131,0" concept="9" />
+      <node id="8945660651102269072" at="131,0,132,143" concept="2" />
+      <node id="8945660651102182245" at="133,51,134,140" concept="2" />
+      <node id="8945660651105530122" at="137,23,138,0" concept="9" />
+      <node id="8945660651105023303" at="138,0,139,66" concept="2" />
+      <node id="8945660651102708715" at="141,21,142,0" concept="9" />
+      <node id="8945660651104078865" at="144,15,145,0" concept="9" />
+      <node id="8945660651105048958" at="145,0,146,159" concept="2" />
+      <node id="8945660651104085258" at="146,159,147,60" concept="8" />
+      <node id="8945660651030411687" at="148,20,149,37" concept="2" />
+      <node id="8945660651030411687" at="149,37,150,60" concept="8" />
+      <node id="8945660651030411685" at="155,35,156,18" concept="8" />
+      <node id="8945660651030411685" at="158,46,159,18" concept="8" />
+      <node id="8945660651030411685" at="161,43,162,117" concept="8" />
+      <node id="8945660651030411685" at="164,47,165,18" concept="8" />
+      <node id="8945660651030411685" at="167,44,168,114" concept="8" />
+      <node id="8945660651030411685" at="170,35,171,18" concept="8" />
+      <node id="8945660651030411685" at="173,33,174,19" concept="8" />
+      <node id="8945660651030411685" at="176,36,177,18" concept="8" />
+      <node id="8945660651030411685" at="179,37,180,18" concept="8" />
+      <node id="8945660651030411685" at="182,65,183,111" concept="7" />
+      <node id="8945660651030411685" at="183,111,184,60" concept="2" />
+      <node id="8945660651030411685" at="184,60,185,16" concept="8" />
+      <node id="8945660651030411685" at="187,66,188,18" concept="8" />
+      <node id="8945660651030411685" at="190,49,191,18" concept="8" />
+      <node id="8945660651030411685" at="193,61,194,34" concept="7" />
+      <node id="8945660651030411685" at="194,34,195,15" concept="8" />
+      <node id="8945660651260522786" at="211,0,212,0" concept="10" trace="File$g" />
+      <node id="8945660651260522786" at="215,0,216,0" concept="10" trace="name$MnvL" />
+      <node id="8945660651030411685" at="75,0,77,0" concept="1" trace="Target_buildWasmFiles#()V" />
+      <node id="8945660651260522786" at="199,0,201,0" concept="1" trace="TargetProperties#()V" />
+      <node id="8945660651260522786" at="201,0,203,0" concept="6" trace="storeValues#(Ljava/util/Map;Ljetbrains/mps/make/script/IPropertiesPool;)V" />
+      <node id="8945660651260522786" at="52,0,55,0" concept="1" trace="MakeMidi_Facet#()V" />
+      <node id="8945660651260522786" at="55,0,58,0" concept="6" trace="targets#()Ljava/lang/Iterable;" />
+      <node id="8945660651260522786" at="58,0,61,0" concept="6" trace="optional#()Ljava/lang/Iterable;" />
+      <node id="8945660651260522786" at="61,0,64,0" concept="6" trace="required#()Ljava/lang/Iterable;" />
+      <node id="8945660651260522786" at="64,0,67,0" concept="6" trace="extended#()Ljava/lang/Iterable;" />
+      <node id="8945660651260522786" at="67,0,70,0" concept="6" trace="getName#()Ljetbrains/mps/make/facet/IFacet/Name;" />
+      <node id="8945660651260522786" at="70,0,73,0" concept="6" trace="propertiesPersistence#()Ljetbrains/mps/make/resources/IPropertiesPersistence;" />
+      <node id="8945660651030411685" at="155,0,158,0" concept="6" trace="createConfig#()Ljetbrains/mps/make/script/IConfig;" />
+      <node id="8945660651030411685" at="158,0,161,0" concept="6" trace="notAfter#()Ljava/lang/Iterable;" />
+      <node id="8945660651030411685" at="161,0,164,0" concept="6" trace="after#()Ljava/lang/Iterable;" />
+      <node id="8945660651030411685" at="164,0,167,0" concept="6" trace="notBefore#()Ljava/lang/Iterable;" />
+      <node id="8945660651030411685" at="167,0,170,0" concept="6" trace="before#()Ljava/lang/Iterable;" />
+      <node id="8945660651030411685" at="170,0,173,0" concept="6" trace="getName#()Ljetbrains/mps/make/facet/ITarget/Name;" />
+      <node id="8945660651030411685" at="173,0,176,0" concept="6" trace="isOptional#()Z" />
+      <node id="8945660651030411685" at="176,0,179,0" concept="6" trace="requiresInput#()Z" />
+      <node id="8945660651030411685" at="179,0,182,0" concept="6" trace="producesOutput#()Z" />
+      <node id="8945660651030411685" at="187,0,190,0" concept="6" trace="expectedOutput#()Ljava/lang/Iterable;" />
+      <node id="8945660651030411685" at="190,0,193,0" concept="6" trace="createParameters#(Ljava/lang/Class;)null" />
+      <node id="8945660651260522786" at="203,83,206,7" concept="12" />
+      <node id="8945660651030411685" at="193,0,197,0" concept="6" trace="createParameters#(Ljava/lang/Class;null)null" />
+      <node id="8945660651244637813" at="96,0,101,19" concept="12" />
+      <node id="8945660651245126902" at="119,0,124,29" concept="12" />
+      <node id="8945660651030411685" at="182,0,187,0" concept="6" trace="expectedInput#()Ljava/lang/Iterable;" />
+      <node id="8945660651260522786" at="203,0,208,0" concept="6" trace="loadValues#(Ljava/util/Map;Ljetbrains/mps/make/script/IPropertiesPool;)V" />
+      <node id="8945660651102591177" at="93,85,102,17" concept="5" />
+      <node id="8945660651102145818" at="114,73,135,27" concept="12" />
+      <node id="8945660651099649576" at="113,134,136,27" concept="2" />
+      <node id="8945660651099554822" at="108,0,137,23" concept="0" />
+      <node id="8945660651097238577" at="105,106,140,21" concept="4" />
+      <node id="8945660651097293058" at="104,47,141,21" concept="2" />
+      <node id="8945660651102708714" at="103,0,143,17" concept="5" />
+      <node id="8945660651096529782" at="88,0,144,15" concept="4" />
+      <node id="8945660651030411687" at="82,86,151,11" concept="11" />
+      <node id="8945660651030411687" at="79,0,153,0" concept="6" trace="execute#(Ljava/lang/Iterable;Ljetbrains/mps/make/script/IJobMonitor;Ljetbrains/mps/make/resources/IPropertiesAccessor;Lorg/jetbrains/mps/openapi/util/ProgressMonitor;)Ljetbrains/mps/make/script/IResult;" />
+      <node id="8945660651030411685" at="77,29,153,8" concept="8" />
+      <node id="8945660651030411685" at="77,0,155,0" concept="6" trace="createJob#()Ljetbrains/mps/make/script/IJob;" />
+      <scope id="8945660651030411685" at="75,36,75,36" />
+      <scope id="8945660651260522786" at="199,31,199,31" />
+      <scope id="8945660651260522786" at="201,84,201,84" />
+      <scope id="8945660651260522786" at="204,11,204,11" />
+      <scope id="8945660651260522786" at="205,37,205,37" />
+      <scope id="8945660651260522786" at="52,27,53,75" />
+      <scope id="8945660651260522786" at="55,38,56,19" />
+      <scope id="8945660651260522786" at="58,43,59,16" />
+      <scope id="8945660651260522786" at="61,43,62,104" />
+      <scope id="8945660651260522786" at="64,43,65,16" />
+      <scope id="8945660651260522786" at="67,32,68,21" />
+      <scope id="8945660651260522786" at="70,57,71,34" />
+      <scope id="8945660651244637815" at="97,23,98,71" />
+      <scope id="8945660651244650832" at="99,45,100,157" />
+      <scope id="8945660651245126904" at="120,33,121,107" />
+      <scope id="8945660651245131870" at="122,53,123,142" />
+      <scope id="8945660651102168896" at="133,51,134,140" />
+      <scope id="8945660651030411685" at="155,35,156,18" />
+      <scope id="8945660651030411685" at="158,46,159,18" />
+      <scope id="8945660651030411685" at="161,43,162,117" />
+      <scope id="8945660651030411685" at="164,47,165,18" />
+      <scope id="8945660651030411685" at="167,44,168,114" />
+      <scope id="8945660651030411685" at="170,35,171,18" />
+      <scope id="8945660651030411685" at="173,33,174,19" />
+      <scope id="8945660651030411685" at="176,36,177,18" />
+      <scope id="8945660651030411685" at="179,37,180,18" />
+      <scope id="8945660651030411685" at="187,66,188,18" />
+      <scope id="8945660651030411685" at="190,49,191,18" />
+      <scope id="8945660651260522786" at="205,7,206,7">
+        <var name="re" id="8945660651260522786" />
+      </scope>
+      <scope id="8945660651030411685" at="75,0,77,0" />
+      <scope id="8945660651244650829" at="99,19,101,19">
+        <var name="err" id="8945660651244650830" />
+      </scope>
+      <scope id="8945660651245131867" at="122,29,124,29">
+        <var name="e" id="8945660651245131868" />
+      </scope>
+      <scope id="8945660651102168893" at="133,27,135,27">
+        <var name="e" id="8945660651102168894" />
+      </scope>
+      <scope id="8945660651030411687" at="148,20,150,60" />
+      <scope id="8945660651030411685" at="193,61,195,15">
+        <var name="t" id="8945660651030411685" />
+      </scope>
+      <scope id="8945660651260522786" at="199,0,201,0" />
+      <scope id="8945660651260522786" at="201,0,203,0">
+        <var name="properties" id="8945660651260522786" />
+        <var name="store" id="8945660651260522786" />
+      </scope>
+      <scope id="8945660651260522786" at="52,0,55,0" />
+      <scope id="8945660651260522786" at="55,0,58,0" />
+      <scope id="8945660651260522786" at="58,0,61,0" />
+      <scope id="8945660651260522786" at="61,0,64,0" />
+      <scope id="8945660651260522786" at="64,0,67,0" />
+      <scope id="8945660651260522786" at="67,0,70,0" />
+      <scope id="8945660651260522786" at="70,0,73,0" />
+      <scope id="8945660651030411685" at="155,0,158,0" />
+      <scope id="8945660651030411685" at="158,0,161,0" />
+      <scope id="8945660651030411685" at="161,0,164,0" />
+      <scope id="8945660651030411685" at="164,0,167,0" />
+      <scope id="8945660651030411685" at="167,0,170,0" />
+      <scope id="8945660651030411685" at="170,0,173,0" />
+      <scope id="8945660651030411685" at="173,0,176,0" />
+      <scope id="8945660651030411685" at="176,0,179,0" />
+      <scope id="8945660651030411685" at="179,0,182,0" />
+      <scope id="8945660651030411685" at="182,65,185,16">
+        <var name="rv" id="8945660651030411685" />
+      </scope>
+      <scope id="8945660651030411685" at="187,0,190,0" />
+      <scope id="8945660651030411685" at="190,0,193,0">
+        <var name="cls" id="8945660651030411685" />
+      </scope>
+      <scope id="8945660651260522786" at="203,83,206,7" />
+      <scope id="8945660651030411685" at="193,0,197,0">
+        <var name="cls" id="8945660651030411685" />
+        <var name="copyFrom" id="8945660651030411685" />
+      </scope>
+      <scope id="8945660651030411685" at="182,0,187,0" />
+      <scope id="8945660651260522786" at="203,0,208,0">
+        <var name="properties" id="8945660651260522786" />
+        <var name="store" id="8945660651260522786" />
+      </scope>
+      <scope id="8945660651102591179" at="94,68,101,19" />
+      <scope id="8945660651102145820" at="115,31,132,143">
+        <var name="localFs" id="8945660651104547154" />
+        <var name="pathToFile" id="8945660651103216647" />
+        <var name="stream" id="8945660651101852131" />
+      </scope>
+      <scope id="8945660651099656344" at="114,73,135,27" />
+      <scope id="8945660651099554822" at="109,23,136,27">
+        <var name="context" id="8945660651099554822" />
+        <var name="files" id="8945660651099644525" />
+        <var name="scope_v8oiv_c0a0a0a0a6a4a0a0" id="8945660651099554822" />
+        <var name="scope_v8oiv_c0a0a0a0a6a4a0a0_0" id="8945660651099554822" />
+      </scope>
+      <scope id="8945660651097238583" at="106,113,139,66">
+        <var name="d" id="8945660651104246093" />
+      </scope>
+      <scope id="8945660651097238577" at="105,106,140,21">
+        <var name="model" id="8945660651097238579" />
+      </scope>
+      <scope id="8945660651097310089" at="105,106,140,21" />
+      <scope id="8945660651102708716" at="104,47,142,0" />
+      <scope id="8945660651096529788" at="89,77,143,17">
+        <var name="generationFacet" id="8945660651101202514" />
+        <var name="moduleName" id="8945660651102629565" />
+        <var name="outputPath" id="8945660651102585549" />
+      </scope>
+      <scope id="8945660651096529782" at="88,0,144,15">
+        <var name="resource" id="8945660651096529784" />
+      </scope>
+      <scope id="8945660651030411687" at="84,19,147,60">
+        <var name="deltas" id="8945660651104211202" />
+      </scope>
+      <scope id="8945660651030411687" at="80,173,151,11">
+        <var name="_output_v8oiv_a0a" id="8945660651030411687" />
+        <var name="input" id="8945660651030411687" />
+      </scope>
+      <scope id="8945660651030411687" at="79,0,153,0">
+        <var name="monitor" id="8945660651030411687" />
+        <var name="pa" id="8945660651030411687" />
+        <var name="progressMonitor" id="8945660651030411687" />
+        <var name="rawInput" id="8945660651030411687" />
+      </scope>
+      <scope id="8945660651030411685" at="77,29,153,8" />
+      <scope id="8945660651030411685" at="77,0,155,0" />
+      <unit id="8945660651260522786" at="210,0,213,0" name="Midi.make.plugin.MakeMidi_Facet$CONCEPTS" />
+      <unit id="8945660651260522786" at="214,0,217,0" name="Midi.make.plugin.MakeMidi_Facet$PROPS" />
+      <unit id="8945660651260522786" at="198,0,209,0" name="Midi.make.plugin.MakeMidi_Facet$TargetProperties" />
+      <unit id="8945660651030411687" at="78,17,153,7" name="Midi.make.plugin.MakeMidi_Facet$Target_buildWasmFiles$1" />
+      <unit id="8945660651030411685" at="73,0,198,0" name="Midi.make.plugin.MakeMidi_Facet$Target_buildWasmFiles" />
+      <unit id="8945660651260522786" at="49,0,218,0" name="Midi.make.plugin.MakeMidi_Facet" />
+    </file>
+  </root>
+</debug-info>
+

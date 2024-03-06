@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/Midi.make/Midi.make.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Midi/Midi.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/MidiPlayground/MidiPlayground.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
