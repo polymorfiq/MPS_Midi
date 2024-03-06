@@ -4,9 +4,20 @@
   <languages>
     <use id="35a3fd90-d026-4551-aa86-3ed1bd51d7c6" name="Midi" version="-1" />
     <use id="9a802adf-9b2a-454a-ae38-8c35125a005f" name="Midi.make" version="-1" />
+    <use id="3ba27497-7a15-4e85-8909-a29a1d64fb03" name="MetaMidi" version="-1" />
   </languages>
   <imports />
   <registry>
+    <language id="3ba27497-7a15-4e85-8909-a29a1d64fb03" name="MetaMidi">
+      <concept id="8945660651262016516" name="MetaMidi.structure.Arpeggio" flags="ng" index="Fz2bN">
+        <property id="8945660651262083315" name="loops" index="FzXS4" />
+        <property id="8945660651262083369" name="pause" index="FzXZu" />
+        <child id="8945660651262083166" name="chord" index="FzXUD" />
+      </concept>
+      <concept id="8945660651262083015" name="MetaMidi.structure.MajorChord" flags="ng" index="FzM4K">
+        <property id="8945660651262113174" name="root" index="FzUHx" />
+      </concept>
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -36,6 +47,10 @@
         <child id="8945660651242187121" name="velocity" index="EnVu6" />
         <child id="8945660651242187120" name="key" index="EnVu7" />
       </concept>
+      <concept id="8945660651242187074" name="Midi.structure.MetaEvent" flags="ng" index="EnVuP">
+        <property id="8945660651248835276" name="typecode" index="ELggV" />
+        <property id="8945660651248808858" name="data" index="EYEPH" />
+      </concept>
       <concept id="8945660651242187086" name="Midi.structure.NoteOff" flags="ng" index="EnVuT">
         <property id="8945660651250171861" name="channel" index="EOu4y" />
         <child id="8945660651242187105" name="key" index="EnVum" />
@@ -46,11 +61,16 @@
       </concept>
       <concept id="8945660651242798627" name="Midi.structure.C0" flags="ng" index="ECm3k" />
       <concept id="8945660651243226719" name="Midi.structure.A0" flags="ng" index="EFTyC" />
+      <concept id="8945660651248916705" name="Midi.structure.SequenceOrTrackName" flags="ng" index="ELcom" />
     </language>
   </registry>
   <node concept="EnvJb" id="7K_nJtmusW6">
-    <property role="TrG5h" value="Some Midi File" />
+    <property role="TrG5h" value="01 - Basic Midi File" />
     <node concept="EnvJ8" id="7K_nJtmu_lv" role="EnvIP">
+      <node concept="ELcom" id="7K_nJtnEiEg" role="EnVs1">
+        <property role="ELggV" value="3" />
+        <property role="EYEPH" value="There once was a dog named Timothy" />
+      </node>
       <node concept="EnVuo" id="7K_nJtn7MaS" role="EnVs1">
         <property role="EnVvf" value="0" />
         <property role="ER1xZ" value="0" />
@@ -117,6 +137,10 @@
       </node>
     </node>
     <node concept="EnvJ8" id="7K_nJtmP1OG" role="EnvIP">
+      <node concept="ELcom" id="7K_nJtnEiGO" role="EnVs1">
+        <property role="ELggV" value="3" />
+        <property role="EYEPH" value="He liked to fetch a ball" />
+      </node>
       <node concept="EnVuo" id="7K_nJtnlFGL" role="EnVs1">
         <property role="EnVvf" value="0" />
         <property role="ER1xZ" value="1" />
@@ -186,6 +210,25 @@
     <node concept="EnvJa" id="7K_nJtmusW7" role="EnvIR">
       <property role="EnvII" value="7K_nJtmualb/simultaneous_tracks" />
       <node concept="EnvIs" id="7K_nJtmRpaK" role="En7yQ">
+        <property role="EnvI7" value="1000" />
+      </node>
+    </node>
+  </node>
+  <node concept="EnvJb" id="7K_nJtnEnMo">
+    <property role="TrG5h" value="02 - Basic MetaMidi" />
+    <node concept="EnvJ8" id="7K_nJtnEnRg" role="EnvIP">
+      <node concept="Fz2bN" id="7K_nJtnESkp" role="EnVs1">
+        <property role="FzXS4" value="5" />
+        <property role="FzXZu" value="1024" />
+        <property role="EnVvf" value="0" />
+        <node concept="FzM4K" id="7K_nJtnIVHd" role="FzXUD">
+          <property role="FzUHx" value="7K_nJtnESme/CSharp" />
+        </node>
+      </node>
+    </node>
+    <node concept="EnvJa" id="7K_nJtnEnMp" role="EnvIR">
+      <property role="EnvII" value="7K_nJtmual9/single_multi_channel_track" />
+      <node concept="EnvIs" id="7K_nJtnEnQ7" role="En7yQ">
         <property role="EnvI7" value="1024" />
       </node>
     </node>

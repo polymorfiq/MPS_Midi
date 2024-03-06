@@ -19,6 +19,7 @@
         <child id="1176897874615" name="nodeFactory" index="4_6I_" />
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
       </concept>
+      <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
@@ -438,12 +439,6 @@
           <property role="Vbekb" value="g1_k_vY/BOLD" />
         </node>
       </node>
-      <node concept="3F0ifn" id="7K_nJtmwmij" role="3EZMnx">
-        <property role="3F0ifm" value=")" />
-        <node concept="11L4FC" id="7K_nJtmwmik" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
       <node concept="3F0ifn" id="7K_nJtmYkxm" role="3EZMnx">
         <property role="3F0ifm" value="channel:" />
         <node concept="11LMrY" id="7K_nJtmYkxn" role="3F10Kt">
@@ -454,6 +449,12 @@
         <ref role="1NtTu8" to="ttqe:7K_nJtmXbZl" resolve="channel" />
         <node concept="Vb9p2" id="7K_nJtmYkxp" role="3F10Kt">
           <property role="Vbekb" value="g1_k_vY/BOLD" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="7K_nJtnKqYn" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+        <node concept="11L4FC" id="7K_nJtnKqZ7" role="3F10Kt">
+          <property role="VOm3f" value="true" />
         </node>
       </node>
       <node concept="l2Vlx" id="7K_nJtmwmil" role="2iSdaV" />
@@ -924,6 +925,22 @@
     <ref role="1XX52x" to="ttqe:7K_nJtmx2IM" resolve="Note" />
     <node concept="PMmxH" id="7K_nJtmx4hJ" role="2wV5jI">
       <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7K_nJtnCxVc">
+    <property role="3GE5qa" value="Events.Meta" />
+    <ref role="1XX52x" to="ttqe:7K_nJtmSpzx" resolve="SequenceOrTrackName" />
+    <node concept="3EZMnI" id="7K_nJtnCxVC" role="2wV5jI">
+      <node concept="3F0ifn" id="7K_nJtnCxWt" role="3EZMnx">
+        <property role="3F0ifm" value="Track Name:" />
+        <node concept="Vb9p2" id="7K_nJtnCxYt" role="3F10Kt">
+          <property role="Vbekb" value="g1_k_vY/BOLD" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7K_nJtnCxX1" role="3EZMnx">
+        <ref role="1NtTu8" to="ttqe:7K_nJtmRZeq" resolve="data" />
+      </node>
+      <node concept="2iRfu4" id="7K_nJtnCxVF" role="2iSdaV" />
     </node>
   </node>
 </model>

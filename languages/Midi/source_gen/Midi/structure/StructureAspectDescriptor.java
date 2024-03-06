@@ -2337,7 +2337,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L);
     b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651248916705");
     b.version(3);
-    b.alias("sequence_or_track_name");
+    b.alias("name");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSequencerSpecificEvent() {

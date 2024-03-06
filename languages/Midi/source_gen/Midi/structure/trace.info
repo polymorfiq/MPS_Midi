@@ -6438,8 +6438,8 @@
     <file name="ConceptPresentationAspectImpl.java">
       <node id="8945660651248916705" at="184,0,185,0" concept="2" trace="props_SequenceOrTrackName" />
       <node id="8945660651248916705" at="1396,48,1397,76" concept="5" />
-      <node id="8945660651248916705" at="1397,76,1398,56" concept="1" />
-      <node id="8945660651248916705" at="1398,56,1399,51" concept="1" />
+      <node id="8945660651248916705" at="1397,76,1398,38" concept="1" />
+      <node id="8945660651248916705" at="1398,38,1399,51" concept="1" />
       <node id="8945660651248916705" at="1400,9,1401,41" concept="6" />
       <node id="8945660651248916705" at="1395,53,1400,9" concept="3" />
       <scope id="8945660651248916705" at="1396,48,1399,51">
@@ -6460,8 +6460,8 @@
       <node id="8945660651248916705" at="2336,40,2337,76" concept="1" />
       <node id="8945660651248916705" at="2337,76,2338,91" concept="1" />
       <node id="8945660651248916705" at="2338,91,2339,17" concept="1" />
-      <node id="8945660651248916705" at="2339,17,2340,38" concept="1" />
-      <node id="8945660651248916705" at="2340,38,2341,22" concept="6" />
+      <node id="8945660651248916705" at="2339,17,2340,20" concept="1" />
+      <node id="8945660651248916705" at="2340,20,2341,22" concept="6" />
       <node id="8945660651248916705" at="2333,0,2343,0" concept="9" trace="createDescriptorForSequenceOrTrackName#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="8945660651248916705" at="575,53,576,44" />
       <scope id="8945660651248916705" at="2333,77,2341,22">

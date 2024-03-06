@@ -13289,7 +13289,7 @@
                         <ref role="37wK5l" to="ze1i:~ConceptPresentationBuilder.rawPresentation(java.lang.String)" resolve="rawPresentation" />
                         <uo k="s:originTrace" v="n:8945660651248916705" />
                         <node concept="Xl_RD" id="1et" role="37wK5m">
-                          <property role="Xl_RC" value="sequence_or_track_name" />
+                          <property role="Xl_RC" value="name" />
                           <uo k="s:originTrace" v="n:8945660651248916705" />
                         </node>
                       </node>
@@ -52572,7 +52572,7 @@
             <node concept="liA8E" id="4IE" role="2OqNvi">
               <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.alias(java.lang.String)" resolve="alias" />
               <node concept="Xl_RD" id="4IF" role="37wK5m">
-                <property role="Xl_RC" value="sequence_or_track_name" />
+                <property role="Xl_RC" value="name" />
               </node>
             </node>
           </node>

@@ -1583,7 +1583,7 @@
     <property role="EcuMT" value="8945660651248916705" />
     <property role="3GE5qa" value="Events.Meta" />
     <property role="TrG5h" value="SequenceOrTrackName" />
-    <property role="34LRSv" value="sequence_or_track_name" />
+    <property role="34LRSv" value="name" />
     <ref role="1TJDcQ" node="7K_nJtmuI_2" resolve="MetaEvent" />
   </node>
   <node concept="1TIwiD" id="7K_nJtmSv3V">

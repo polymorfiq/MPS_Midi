@@ -1395,7 +1395,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.SequenceOrTrackName:
         if (props_SequenceOrTrackName == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("sequence_or_track_name");
+          cpb.rawPresentation("name");
           props_SequenceOrTrackName = cpb.create();
         }
         return props_SequenceOrTrackName;
