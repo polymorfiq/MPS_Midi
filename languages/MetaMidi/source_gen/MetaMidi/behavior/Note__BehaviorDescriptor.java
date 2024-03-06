@@ -43,52 +43,55 @@ public final class Note__BehaviorDescriptor extends BaseBHDescriptor {
 
     switch (enumSwitchIndex.indexNullable(SPropertyOperations.getEnum(__thisNode__, PROPS.name$XCpV))) {
       case 0:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568a55d8L, "Midi.structure.GSharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568a6f0eL, "Midi.structure.GSharp3"));
         break;
       case 1:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568ac65fL, "Midi.structure.A0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568adfb0L, "Midi.structure.A3"));
         break;
       case 2:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568b12aaL, "Midi.structure.ASharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568b25ebL, "Midi.structure.ASharp3"));
         break;
       case 3:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568b12aaL, "Midi.structure.ASharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568b25ebL, "Midi.structure.ASharp3"));
         break;
       case 4:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568ba158L, "Midi.structure.B0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568bbaa8L, "Midi.structure.B3"));
         break;
       case 5:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756843e23L, "Midi.structure.C0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75684a677L, "Midi.structure.C3"));
         break;
       case 6:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75686b8e5L, "Midi.structure.CSharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568702a8L, "Midi.structure.CSharp3"));
         break;
       case 7:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75686b8e5L, "Midi.structure.CSharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568702a8L, "Midi.structure.CSharp3"));
         break;
       case 8:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568766b4L, "Midi.structure.D0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756878009L, "Midi.structure.D3"));
         break;
       case 9:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75687ddf9L, "Midi.structure.DSharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75687f143L, "Midi.structure.DSharp3"));
         break;
       case 10:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75687ddf9L, "Midi.structure.DSharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75687f143L, "Midi.structure.DSharp3"));
         break;
       case 11:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756883ce7L, "Midi.structure.E0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75688561cL, "Midi.structure.E3"));
         break;
       case 12:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75688b9e0L, "Midi.structure.F0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75688df3cL, "Midi.structure.F3"));
         break;
       case 13:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568930efL, "Midi.structure.FSharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756896e6dL, "Midi.structure.FSharp3"));
         break;
       case 14:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75689ba27L, "Midi.structure.G0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756896e6dL, "Midi.structure.FSharp3"));
         break;
       case 15:
-        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568a55d8L, "Midi.structure.GSharp0"));
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75689ebe0L, "Midi.structure.G3"));
+        break;
+      case 16:
+        note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7568a6f0eL, "Midi.structure.GSharp3"));
         break;
     }
 
@@ -142,7 +145,7 @@ public final class Note__BehaviorDescriptor extends BaseBHDescriptor {
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static final EnumerationLiteralsIndex enumSwitchIndex = EnumerationLiteralsIndex.build(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757aa7e55L, 0x7c255ef757ab87bbL, 0x7c255ef757ab87e8L, 0x7c255ef757ab880cL, 0x7c255ef757ab8831L, 0x7c255ef757ab886bL, 0x7c255ef757aa7e56L, 0x7c255ef757ab858eL, 0x7c255ef757ab85b5L, 0x7c255ef757ab862aL, 0x7c255ef757ab866dL, 0x7c255ef757ab8692L, 0x7c255ef757ab86b8L, 0x7c255ef757ab86d5L, 0x7c255ef757ab8726L, 0x7c255ef757ab8764L, 0x7c255ef757ab8785L);
+  private static final EnumerationLiteralsIndex enumSwitchIndex = EnumerationLiteralsIndex.build(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757aa7e55L, 0x7c255ef757ab87bbL, 0x7c255ef757ab87e8L, 0x7c255ef757ab880cL, 0x7c255ef757ab8831L, 0x7c255ef757ab886bL, 0x7c255ef757aa7e56L, 0x7c255ef757ab858eL, 0x7c255ef757ab85b5L, 0x7c255ef757ab862aL, 0x7c255ef757ab866dL, 0x7c255ef757ab8692L, 0x7c255ef757ab86b8L, 0x7c255ef757ab86d5L, 0x7c255ef757ab86f3L, 0x7c255ef757ab8726L, 0x7c255ef757ab8764L, 0x7c255ef757ab8785L);
 
   private static final class PROPS {
     /*package*/ static final SProperty name$XCpV = MetaAdapterFactory.getProperty(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757aec7e5L, 0x7c255ef757aec829L, "name");
