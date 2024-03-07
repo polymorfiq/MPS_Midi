@@ -10,10 +10,14 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.InsertMacroContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import MetaMidi.behavior.Chord__BehaviorDescriptor;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import java.util.Deque;
+import jetbrains.mps.internal.collections.runtime.LinkedListSequence;
+import java.util.LinkedList;
 import jetbrains.mps.internal.collections.runtime.Sequence;
-import MetaMidi.behavior.Note__BehaviorDescriptor;
+import MusicTheoryLang.behavior.PitchCollection__BehaviorDescriptor;
+import MusicTheoryLang.behavior.Pitch__BehaviorDescriptor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import Midi.behavior.Note__BehaviorDescriptor;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.Map;
 import jetbrains.mps.generator.impl.query.SourceNodesQuery;
@@ -38,13 +42,20 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static SNode insertMacro_Query_0_0(final InsertMacroContext _context) {
     final SNode output = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757ad7b8aL, "MetaMidi.structure.EventList"));
-    Iterable<SNode> notes = Chord__BehaviorDescriptor.notes_id7K_nJtnFGsG.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.chord$LIVU));
+    final Deque<SNode> notes = LinkedListSequence.fromLinkedList(new LinkedList<SNode>());
+
+    Sequence.fromIterable(PitchCollection__BehaviorDescriptor.pitches_id7K_nJtnOP5p.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.chord$LIVU))).visitAll((pitch) -> {
+      SNode midiNote = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756842bb2L, "Midi.structure.Note"));
+      SLinkOperations.setTarget(midiNote, LINKS.note$Q_5b, Pitch__BehaviorDescriptor.closestNote_id7K_nJtodIyB.invoke(pitch));
+
+      LinkedListSequence.fromLinkedListNew(notes).addElement(midiNote);
+    });
 
     for (int i = 0; i < SPropertyOperations.getInteger(_context.getNode(), PROPS.loops$Sdhw); i++) {
-      Sequence.fromIterable(notes).visitAll((note) -> {
+      LinkedListSequence.fromLinkedListNew(notes).visitAll((note) -> {
         SNode noteOn = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae96fL, "Midi.structure.NoteOn"));
         SPropertyOperations.assign(noteOn, PROPS.deltaTime$wbRX, 0);
-        SLinkOperations.setTarget(noteOn, LINKS.key$zlHK, Note__BehaviorDescriptor.toMidi_id7K_nJtnITs8.invoke(note));
+        SLinkOperations.setTarget(noteOn, LINKS.key$zlHK, Note__BehaviorDescriptor.clone_id7K_nJtoc7OL.invoke(note));
         SPropertyOperations.assign(noteOn, PROPS.channel$1Joc, 0);
 
         SNode baseVelocity = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae964L, "Midi.structure.VelocityValue"));
@@ -52,10 +63,9 @@ public class QueriesGenerated extends QueryProviderBase {
         SLinkOperations.setTarget(noteOn, LINKS.velocity$zlWL, baseVelocity);
         ListSequence.fromList(SLinkOperations.getChildren(output, LINKS.events$yG3K)).addElement(noteOn);
 
-
         SNode noteOff = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL, "Midi.structure.NoteOff"));
         SPropertyOperations.assign(noteOff, PROPS.deltaTime$wbRX, SPropertyOperations.getInteger(_context.getNode(), PROPS.pause$SM$Z));
-        SLinkOperations.setTarget(noteOff, LINKS.key$z2G2, Note__BehaviorDescriptor.toMidi_id7K_nJtnITs8.invoke(note));
+        SLinkOperations.setTarget(noteOff, LINKS.key$z2G2, Note__BehaviorDescriptor.clone_id7K_nJtoc7OL.invoke(note));
         SPropertyOperations.assign(noteOff, PROPS.channel$zFVx, 0);
 
         SNode offBaseVelocity = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae964L, "Midi.structure.VelocityValue"));
@@ -124,6 +134,7 @@ public class QueriesGenerated extends QueryProviderBase {
   private static final class LINKS {
     /*package*/ static final SContainmentLink events$yG3K = MetaAdapterFactory.getContainmentLink(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757ad7b8aL, 0x7c255ef757ad7bc3L, "events");
     /*package*/ static final SContainmentLink chord$LIVU = MetaAdapterFactory.getContainmentLink(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757a97c04L, 0x7c255ef757aa805eL, "chord");
+    /*package*/ static final SContainmentLink note$Q_5b = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756842bb2L, 0x7c255ef758235f7aL, "note");
     /*package*/ static final SContainmentLink key$zlHK = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae96fL, 0x7c255ef7567ae970L, "key");
     /*package*/ static final SContainmentLink velocity$zlWL = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae96fL, 0x7c255ef7567ae971L, "velocity");
     /*package*/ static final SContainmentLink key$z2G2 = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL, 0x7c255ef7567ae961L, "key");

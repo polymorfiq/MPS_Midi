@@ -13,9 +13,6 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myArpeggio__BehaviorDescriptor = new Arpeggio__BehaviorDescriptor();
-  private final BHDescriptor myMajorChord__BehaviorDescriptor = new MajorChord__BehaviorDescriptor();
-  private final BHDescriptor myChord__BehaviorDescriptor = new Chord__BehaviorDescriptor();
-  private final BHDescriptor myNote__BehaviorDescriptor = new Note__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -26,15 +23,9 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
     switch (conceptIndex.index(cncpt)) {
       case 0:
         return myArpeggio__BehaviorDescriptor;
-      case 1:
-        return myChord__BehaviorDescriptor;
-      case 2:
-        return myMajorChord__BehaviorDescriptor;
-      case 3:
-        return myNote__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757a97c04L), MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757aec6d8L), MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757aa7fc7L), MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757aec7e5L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757a97c04L)).seal();
 }

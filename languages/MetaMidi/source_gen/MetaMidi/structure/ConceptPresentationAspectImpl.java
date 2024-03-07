@@ -10,10 +10,7 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Arpeggio;
-  private ConceptPresentation props_Chord;
   private ConceptPresentation props_EventList;
-  private ConceptPresentation props_MajorChord;
-  private ConceptPresentation props_Note;
 
   @Override
   @Nullable
@@ -27,12 +24,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Arpeggio = cpb.create();
         }
         return props_Arpeggio;
-      case LanguageConceptSwitch.Chord:
-        if (props_Chord == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_Chord = cpb.create();
-        }
-        return props_Chord;
       case LanguageConceptSwitch.EventList:
         if (props_EventList == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -40,20 +31,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EventList = cpb.create();
         }
         return props_EventList;
-      case LanguageConceptSwitch.MajorChord:
-        if (props_MajorChord == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("major");
-          props_MajorChord = cpb.create();
-        }
-        return props_MajorChord;
-      case LanguageConceptSwitch.Note:
-        if (props_Note == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Note");
-          props_Note = cpb.create();
-        }
-        return props_Note;
     }
     return null;
   }

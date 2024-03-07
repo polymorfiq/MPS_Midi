@@ -10,18 +10,12 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
   public static final int Arpeggio = 0;
-  public static final int Chord = 1;
-  public static final int EventList = 2;
-  public static final int MajorChord = 3;
-  public static final int Note = 4;
+  public static final int EventList = 1;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x3ba274977a154e85L, 0x8909a29a1d64fb03L);
     builder.put(0x7c255ef757a97c04L, Arpeggio);
-    builder.put(0x7c255ef757aec6d8L, Chord);
     builder.put(0x7c255ef757ad7b8aL, EventList);
-    builder.put(0x7c255ef757aa7fc7L, MajorChord);
-    builder.put(0x7c255ef757aec7e5L, Note);
     myIndex = builder.seal();
   }
 

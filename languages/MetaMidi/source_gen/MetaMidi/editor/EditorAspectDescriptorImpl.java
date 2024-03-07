@@ -21,8 +21,6 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
         return Collections.<ConceptEditor>singletonList(new Arpeggio_Editor());
       case 1:
         return Collections.<ConceptEditor>singletonList(new EventList_Editor());
-      case 2:
-        return Collections.<ConceptEditor>singletonList(new MajorChord_Editor());
       default:
     }
     return Collections.<ConceptEditor>emptyList();
@@ -30,5 +28,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757a97c04L), MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757ad7b8aL), MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757aa7fc7L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757a97c04L), MetaIdFactory.conceptId(0x3ba274977a154e85L, 0x8909a29a1d64fb03L, 0x7c255ef757ad7b8aL)).seal();
 }

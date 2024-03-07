@@ -80,11 +80,6 @@
         <reference id="1138405853777" name="concept" index="ehGHo" />
       </concept>
     </language>
-    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
-      </concept>
-    </language>
   </registry>
   <node concept="24kQdi" id="7K_nJtnEC67">
     <ref role="1XX52x" to="svim:7K_nJtnEnK4" resolve="Arpeggio" />
@@ -172,31 +167,6 @@
       <node concept="3F0ifn" id="7K_nJtnECs8" role="3EZMnx">
         <property role="3F0ifm" value="}" />
       </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="7K_nJtnEJjN">
-    <property role="3GE5qa" value="Chords" />
-    <ref role="1XX52x" to="svim:7K_nJtnEBZ7" resolve="MajorChord" />
-    <node concept="3EZMnI" id="7K_nJtnEJk5" role="2wV5jI">
-      <node concept="3F0ifn" id="7K_nJtnEJl1" role="3EZMnx">
-        <property role="3F0ifm" value="major" />
-      </node>
-      <node concept="3F0ifn" id="7K_nJtnEJlh" role="3EZMnx">
-        <property role="3F0ifm" value="(" />
-        <node concept="11LMrY" id="7K_nJtnEJqP" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="7K_nJtnEJpL" role="3EZMnx">
-        <ref role="1NtTu8" to="svim:7K_nJtnEJmm" resolve="root" />
-      </node>
-      <node concept="3F0ifn" id="7K_nJtnEJq5" role="3EZMnx">
-        <property role="3F0ifm" value=")" />
-        <node concept="11L4FC" id="7K_nJtnEJrl" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="2iRfu4" id="7K_nJtnEJk8" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="7K_nJtnFwVW">

@@ -15,6 +15,7 @@
     <language slang="l:3ba27497-7a15-4e85-8909-a29a1d64fb03:MetaMidi" version="0" />
     <language slang="l:35a3fd90-d026-4551-aa86-3ed1bd51d7c6:Midi" version="0" />
     <language slang="l:9a802adf-9b2a-454a-ae38-8c35125a005f:Midi.make" version="0" />
+    <language slang="l:87d1018d-30c4-4219-852f-1bd942b093e8:MusicTheoryLang" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="2" />
   </languageVersions>
   <dependencyVersions>

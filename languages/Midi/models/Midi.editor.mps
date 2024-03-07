@@ -920,13 +920,6 @@
       <ref role="1NtTu8" to="ttqe:7K_nJtmuIAq" resolve="controller_number" />
     </node>
   </node>
-  <node concept="24kQdi" id="7K_nJtmx4hH">
-    <property role="3GE5qa" value="Events" />
-    <ref role="1XX52x" to="ttqe:7K_nJtmx2IM" resolve="Note" />
-    <node concept="PMmxH" id="7K_nJtmx4hJ" role="2wV5jI">
-      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
-    </node>
-  </node>
   <node concept="24kQdi" id="7K_nJtnCxVc">
     <property role="3GE5qa" value="Events.Meta" />
     <ref role="1XX52x" to="ttqe:7K_nJtmSpzx" resolve="SequenceOrTrackName" />
@@ -941,6 +934,13 @@
         <ref role="1NtTu8" to="ttqe:7K_nJtmRZeq" resolve="data" />
       </node>
       <node concept="2iRfu4" id="7K_nJtnCxVF" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7K_nJtnYOrb">
+    <property role="3GE5qa" value="Events" />
+    <ref role="1XX52x" to="ttqe:7K_nJtmx2IM" resolve="Note" />
+    <node concept="3F1sOY" id="7K_nJto8PY5" role="2wV5jI">
+      <ref role="1NtTu8" to="ttqe:7K_nJto8PXU" resolve="note" />
     </node>
   </node>
 </model>

@@ -27,6 +27,7 @@
       <languageVersions>
         <language slang="l:3ba27497-7a15-4e85-8909-a29a1d64fb03:MetaMidi" version="0" />
         <language slang="l:35a3fd90-d026-4551-aa86-3ed1bd51d7c6:Midi" version="0" />
+        <language slang="l:87d1018d-30c4-4219-852f-1bd942b093e8:MusicTheoryLang" version="0" />
         <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="12" />
         <language slang="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" version="0" />
         <language slang="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" version="2" />
@@ -52,6 +53,7 @@
         <module reference="3ba27497-7a15-4e85-8909-a29a1d64fb03(MetaMidi)" version="0" />
         <module reference="afed8df2-d399-4474-ac41-1e96418a4e4e(MetaMidi.generator)" version="0" />
         <module reference="35a3fd90-d026-4551-aa86-3ed1bd51d7c6(Midi)" version="0" />
+        <module reference="87d1018d-30c4-4219-852f-1bd942b093e8(MusicTheoryLang)" version="0" />
         <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
       </dependencyVersions>
       <mapping-priorities />
@@ -98,6 +100,7 @@
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="3ba27497-7a15-4e85-8909-a29a1d64fb03(MetaMidi)" version="0" />
     <module reference="35a3fd90-d026-4551-aa86-3ed1bd51d7c6(Midi)" version="0" />
+    <module reference="87d1018d-30c4-4219-852f-1bd942b093e8(MusicTheoryLang)" version="0" />
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
     <module reference="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" version="0" />
   </dependencyVersions>

@@ -112,6 +112,7 @@
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="35a3fd90-d026-4551-aa86-3ed1bd51d7c6(Midi)" version="0" />
     <module reference="9a802adf-9b2a-454a-ae38-8c35125a005f(Midi.make)" version="0" />
+    <module reference="87d1018d-30c4-4219-852f-1bd942b093e8(MusicTheoryLang)" version="0" />
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
     <module reference="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" version="0" />
     <module reference="f8e20673-3f65-44e9-84c0-c4a4b6ede37e(jetbrains.mps.make.facets)" version="0" />

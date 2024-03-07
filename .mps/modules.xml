@@ -6,6 +6,7 @@
       <modulePath path="$PROJECT_DIR$/languages/Midi.make/Midi.make.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/Midi/Midi.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/MidiPlayground/MidiPlayground.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/../MusicTheory/languages/MusicTheoryLang/MusicTheoryLang.mpl" folder="" />
     </projectModules>
   </component>
 </project>
