@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root nodeRef="r:3802df0d-0a05-41b5-89dd-cc8af13afcdd(MidiImporter.plugin)/1144671015387343327">
+    <file name="MidiImporter_ApplicationPlugin.java">
+      <node id="1144671015387343327" at="11,0,12,0" concept="3" trace="myId" />
+      <node id="1144671015387343327" at="17,27,18,16" concept="7" />
+      <node id="1144671015387343327" at="21,30,22,29" concept="8" />
+      <node id="1144671015387343327" at="23,43,24,13" concept="8" />
+      <node id="1144671015387343327" at="13,0,15,0" concept="1" trace="MidiImporter_ApplicationPlugin#()V" />
+      <node id="1144671015387343327" at="27,0,30,0" concept="5" trace="adjustRegularGroups#()V" />
+      <node id="1144671015387343327" at="16,0,20,0" concept="5" trace="getId#()Lcom/intellij/openapi/extensions/PluginId;" />
+      <node id="1144671015387343327" at="21,0,27,0" concept="5" trace="createGroups#()V" />
+      <scope id="1144671015387343327" at="13,43,13,43" />
+      <scope id="1144671015387343327" at="17,27,18,16" />
+      <scope id="1144671015387343327" at="27,37,28,135" />
+      <scope id="1144671015387343327" at="13,0,15,0" />
+      <scope id="1144671015387343327" at="27,0,30,0" />
+      <scope id="1144671015387343327" at="16,0,20,0" />
+      <scope id="1144671015387343327" at="21,30,25,50" />
+      <scope id="1144671015387343327" at="21,0,27,0" />
+      <unit id="1144671015387343327" at="10,0,31,0" name="MidiImporter.plugin.MidiImporter_ApplicationPlugin" />
+    </file>
+  </root>
+  <root nodeRef="r:3802df0d-0a05-41b5-89dd-cc8af13afcdd(MidiImporter.plugin)/1144671015387390305">
+    <file name="ImportMidiFile_Action.java">
+      <node id="1144671015387390305" at="25,0,26,0" concept="10" trace="ICON" />
+      <node id="1144671015387390305" at="27,34,28,43" concept="11" />
+      <node id="1144671015387390305" at="28,43,29,35" concept="2" />
+      <node id="1144671015387390305" at="29,35,30,44" concept="2" />
+      <node id="1144671015387390305" at="33,32,34,16" concept="7" />
+      <node id="1144671015387390305" at="38,53,39,19" concept="7" />
+      <node id="1144671015387391900" at="41,5,42,56" concept="6" />
+      <node id="1144671015387391901" at="43,22,44,21" concept="7" />
+      <node id="1144671015387393819" at="47,5,48,56" concept="6" />
+      <node id="1144671015387393820" at="49,22,50,21" concept="7" />
+      <node id="1144671015387396196" at="53,5,54,66" concept="6" />
+      <node id="1144671015387396197" at="55,22,56,21" concept="7" />
+      <node id="1144671015387390305" at="58,5,59,16" concept="7" />
+      <node id="4331152222892338439" at="62,96,63,167" concept="6" />
+      <node id="4331152222892338948" at="63,167,64,0" concept="9" />
+      <node id="4331152222892345158" at="65,29,66,29" concept="8" />
+      <node id="4331152222892344333" at="66,29,67,13" concept="7" />
+      <node id="1144671015387438439" at="68,5,69,0" concept="9" />
+      <node id="1144671015388511215" at="71,11,72,131" concept="2" />
+      <node id="1144671015387473828" at="73,37,74,172" concept="2" />
+      <node id="1144671015387438464" at="76,7,77,0" concept="9" />
+      <node id="1144671015387390305" at="37,95,40,5" concept="4" />
+      <node id="1144671015387391901" at="42,56,45,7" concept="4" />
+      <node id="1144671015387393820" at="48,56,51,7" concept="4" />
+      <node id="1144671015387396197" at="54,66,57,7" concept="4" />
+      <node id="1144671015387390305" at="32,0,36,0" concept="5" trace="isDumbAware#()Z" />
+      <node id="4331152222892340085" at="64,0,68,5" concept="4" />
+      <node id="1144671015387390305" at="27,0,32,0" concept="1" trace="ImportMidiFile_Action#()V" />
+      <node id="4331152222892356547" at="70,104,75,7" concept="12" />
+      <node id="1144671015387391900" at="40,5,46,5" concept="0" />
+      <node id="1144671015387393819" at="46,5,52,5" concept="0" />
+      <node id="1144671015387396196" at="52,5,58,5" concept="0" />
+      <node id="4331152222892387907" at="69,0,76,7" concept="2" />
+      <node id="1144671015387390305" at="61,0,79,0" concept="5" trace="doExecute#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)V" />
+      <node id="1144671015387390305" at="36,0,61,0" concept="5" trace="collectActionData#(Lcom/intellij/openapi/actionSystem/AnActionEvent;Ljava/util/Map;)Z" />
+      <scope id="1144671015387390305" at="33,32,34,16" />
+      <scope id="1144671015387390305" at="38,53,39,19" />
+      <scope id="1144671015387391901" at="43,22,44,21" />
+      <scope id="1144671015387393820" at="49,22,50,21" />
+      <scope id="1144671015387396197" at="55,22,56,21" />
+      <scope id="4331152222892356549" at="71,11,72,131" />
+      <scope id="4331152222892358273" at="73,37,74,172" />
+      <scope id="4331152222892340087" at="65,29,67,13" />
+      <scope id="4331152222892358270" at="73,7,75,7">
+        <var name="exception" id="4331152222892358271" />
+      </scope>
+      <scope id="1144671015387390305" at="27,34,30,44" />
+      <scope id="1144671015387390305" at="32,0,36,0" />
+      <scope id="1144671015387391900" at="41,5,45,7">
+        <var name="p" id="1144671015387391900" />
+      </scope>
+      <scope id="1144671015387393819" at="47,5,51,7">
+        <var name="p" id="1144671015387393819" />
+      </scope>
+      <scope id="1144671015387396196" at="53,5,57,7">
+        <var name="p" id="1144671015387396196" />
+      </scope>
+      <scope id="1144671015387390305" at="27,0,32,0" />
+      <scope id="4331152222892387911" at="70,104,75,7" />
+      <scope id="1144671015387390305" at="62,96,77,0">
+        <var name="chosenFile" id="4331152222892338440" />
+      </scope>
+      <scope id="1144671015387390305" at="61,0,79,0">
+        <var name="_params" id="1144671015387390305" />
+        <var name="event" id="1144671015387390305" />
+      </scope>
+      <scope id="1144671015387390305" at="37,95,59,16" />
+      <scope id="1144671015387390305" at="36,0,61,0">
+        <var name="_params" id="1144671015387390305" />
+        <var name="event" id="1144671015387390305" />
+      </scope>
+      <unit id="1144671015387390305" at="24,0,80,0" name="MidiImporter.plugin.ImportMidiFile_Action" />
+    </file>
+    <file name="MidiImporter_ApplicationPlugin.java">
+      <node id="1144671015387390305" at="22,29,23,43" concept="2" />
+    </file>
+  </root>
+  <root nodeRef="r:3802df0d-0a05-41b5-89dd-cc8af13afcdd(MidiImporter.plugin)/1144671015387396232">
+    <file name="MidiFileGroup_ActionGroup.java">
+      <node id="1144671015387396232" at="10,0,11,0" concept="10" trace="ID" />
+      <node id="1144671015387396232" at="12,71,13,39" concept="11" />
+      <node id="1144671015387396232" at="13,39,14,25" concept="2" />
+      <node id="1144671015387396232" at="14,25,15,20" concept="2" />
+      <node id="1144671015387396237" at="15,20,16,90" concept="2" />
+      <node id="1144671015387396232" at="12,0,18,0" concept="1" trace="MidiFileGroup_ActionGroup#(Ljetbrains/mps/workbench/action/ApplicationPlugin;)V" />
+      <scope id="1144671015387396232" at="12,71,16,90" />
+      <scope id="1144671015387396232" at="12,0,18,0">
+        <var name="plugin" id="1144671015387396232" />
+      </scope>
+      <unit id="1144671015387396232" at="9,0,19,0" name="MidiImporter.plugin.MidiFileGroup_ActionGroup" />
+    </file>
+    <file name="MidiImporter_ApplicationPlugin.java">
+      <node id="1144671015387396232" at="24,13,25,50" concept="2" />
+      <node id="1144671015387396239" at="27,37,28,135" concept="2" />
+    </file>
+  </root>
+</debug-info>
+
