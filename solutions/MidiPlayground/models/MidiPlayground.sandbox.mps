@@ -5,6 +5,8 @@
     <use id="35a3fd90-d026-4551-aa86-3ed1bd51d7c6" name="Midi" version="-1" />
     <use id="9a802adf-9b2a-454a-ae38-8c35125a005f" name="Midi.make" version="-1" />
     <use id="3ba27497-7a15-4e85-8909-a29a1d64fb03" name="MetaMidi" version="-1" />
+    <engage id="3ba27497-7a15-4e85-8909-a29a1d64fb03" name="MetaMidi" />
+    <engage id="35a3fd90-d026-4551-aa86-3ed1bd51d7c6" name="Midi" />
   </languages>
   <imports />
   <registry>

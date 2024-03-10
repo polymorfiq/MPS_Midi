@@ -49,7 +49,7 @@ public final class ChannelMode__BehaviorDescriptor extends BaseBHDescriptor {
     bytes[i] = (byte) (0b10110000 | channelNum);
     i += 1;
 
-    byte controller = 0;
+    byte controller;
     switch (enumSwitchIndex.indexNullable(SPropertyOperations.getEnum(__thisNode__, PROPS.mode$BePV))) {
       case 0:
         controller = 122;

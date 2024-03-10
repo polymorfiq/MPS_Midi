@@ -56,7 +56,7 @@ public final class KeySignature__BehaviorDescriptor extends BaseBHDescriptor {
     System.arraycopy(lenBytes, 0, bytes, i, lenBytes.length);
     i += lenBytes.length;
 
-    byte sf = 0;
+    byte sf;
     byte mi = 0;
     switch (enumSwitchIndex.indexNullable(SPropertyOperations.getEnum(__thisNode__, PROPS.sf$pM$g))) {
       case 0:

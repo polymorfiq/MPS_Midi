@@ -10,7 +10,6 @@
   <uses module="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="dp" />
   <uses module="3ba27497-7a15-4e85-8909-a29a1d64fb03(MetaMidi)" kind="dp" />
   <uses module="35a3fd90-d026-4551-aa86-3ed1bd51d7c6(Midi)" kind="dp" />
-  <uses module="87d1018d-30c4-4219-852f-1bd942b093e8(MusicTheoryLang)" kind="dp" />
   <uses module="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
   <uses module="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
   <uses module="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />

@@ -24,6 +24,10 @@
         </facet>
       </facets>
       <external-templates />
+      <dependencies>
+        <dependency reexport="false">35a3fd90-d026-4551-aa86-3ed1bd51d7c6(Midi)</dependency>
+        <dependency reexport="false">87d1018d-30c4-4219-852f-1bd942b093e8(MusicTheoryLang)</dependency>
+      </dependencies>
       <languageVersions>
         <language slang="l:3ba27497-7a15-4e85-8909-a29a1d64fb03:MetaMidi" version="0" />
         <language slang="l:35a3fd90-d026-4551-aa86-3ed1bd51d7c6:Midi" version="0" />
@@ -59,6 +63,9 @@
       <mapping-priorities />
     </generator>
   </generators>
+  <dependencies>
+    <dependency reexport="false">87d1018d-30c4-4219-852f-1bd942b093e8(MusicTheoryLang)</dependency>
+  </dependencies>
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="12" />
     <language slang="l:443f4c36-fcf5-4eb6-9500-8d06ed259e3e:jetbrains.mps.baseLanguage.classifiers" version="0" />

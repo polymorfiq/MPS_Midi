@@ -2,7 +2,6 @@
 <model ref="r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)">
   <persistence version="9" />
   <languages>
-    <use id="87d1018d-30c4-4219-852f-1bd942b093e8" name="MusicTheoryLang" version="0" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>

@@ -75,7 +75,6 @@ public final class Header__BehaviorDescriptor extends BaseBHDescriptor {
 
     byte[] divisionBytes = ByteSized__BehaviorDescriptor.bytes_id7K_nJtmDrGV.invoke(SLinkOperations.getTarget(__thisNode__, LINKS.division$s8vF));
     System.arraycopy(divisionBytes, 0, bytes, i, 2);
-    i += 2;
 
     return bytes;
   }

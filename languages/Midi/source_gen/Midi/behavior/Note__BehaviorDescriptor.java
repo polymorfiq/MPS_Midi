@@ -36,7 +36,7 @@ public final class Note__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static int note_number_id7K_nJtmx2Jg(@NotNull SNode __thisNode__) {
-    int note_number = 0;
+    int note_number;
 
     int offset = 0;
     switch (enumSwitchIndex.indexNullable(SPropertyOperations.getEnum(SLinkOperations.getTarget(__thisNode__, LINKS.note$Q_5b), PROPS.name$nBvq))) {
