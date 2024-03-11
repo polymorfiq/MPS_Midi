@@ -950,5 +950,84 @@
       <ref role="1NtTu8" to="ttqe:6SoZt8JFXYu" resolve="pressure" />
     </node>
   </node>
+  <node concept="24kQdi" id="5xupjsnQ5Eu">
+    <property role="3GE5qa" value="Events.Meta" />
+    <ref role="1XX52x" to="ttqe:7K_nJtmSSm7" resolve="SmpteOffset" />
+    <node concept="3EZMnI" id="5xupjsnQ5Ew" role="2wV5jI">
+      <node concept="3F0ifn" id="5xupjsnQ5Jd" role="3EZMnx">
+        <property role="3F0ifm" value="delta" />
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5JN" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+        <node concept="11L4FC" id="5xupjsnQIwy" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="5xupjsnQ5MP" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="5xupjsnQ5Kr" role="3EZMnx">
+        <ref role="1NtTu8" to="ttqe:7K_nJtmuI$S" resolve="deltaTime" />
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5L5" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+        <node concept="11L4FC" id="5xupjsnQ5MS" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5Mt" role="3EZMnx">
+        <property role="3F0ifm" value="-&gt;" />
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5EB" role="3EZMnx">
+        <property role="3F0ifm" value="smpte_offset" />
+      </node>
+      <node concept="3F0A7n" id="5xupjsnQ5EH" role="3EZMnx">
+        <ref role="1NtTu8" to="ttqe:7K_nJtmUlfE" resolve="hour" />
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5EP" role="3EZMnx">
+        <property role="3F0ifm" value="hh" />
+        <node concept="11L4FC" id="5xupjsnQ5EV" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="5xupjsnQ5F4" role="3EZMnx">
+        <ref role="1NtTu8" to="ttqe:7K_nJtmUlg0" resolve="minute" />
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5Fi" role="3EZMnx">
+        <property role="3F0ifm" value="mm" />
+        <node concept="11L4FC" id="5xupjsnQ5Fr" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="5xupjsnQ5FB" role="3EZMnx">
+        <ref role="1NtTu8" to="ttqe:7K_nJtmUlgo" resolve="second" />
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5FV" role="3EZMnx">
+        <property role="3F0ifm" value="ss" />
+        <node concept="11L4FC" id="5xupjsnQ5G7" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="5xupjsnQ5Gm" role="3EZMnx">
+        <ref role="1NtTu8" to="ttqe:7K_nJtmUlgL" resolve="frame" />
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5GK" role="3EZMnx">
+        <property role="3F0ifm" value="f" />
+        <node concept="11L4FC" id="5xupjsnQ5GZ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="5xupjsnQ5Hh" role="3EZMnx">
+        <ref role="1NtTu8" to="ttqe:7K_nJtmU_tx" resolve="fractional_frames" />
+      </node>
+      <node concept="3F0ifn" id="5xupjsnQ5HL" role="3EZMnx">
+        <property role="3F0ifm" value="ff" />
+        <node concept="11L4FC" id="5xupjsnQ5I3" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="2iRfu4" id="5xupjsnQ5Ez" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

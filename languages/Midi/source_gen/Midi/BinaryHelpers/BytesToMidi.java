@@ -358,6 +358,7 @@ public class BytesToMidi {
         SPropertyOperations.assign(smpteOffset, PROPS.deltaTime$wbRX, deltaTime);
         SPropertyOperations.assign(smpteOffset, PROPS.hour$7NVM, in.read());
         SPropertyOperations.assign(smpteOffset, PROPS.minute$87S7, in.read());
+        SPropertyOperations.assign(smpteOffset, PROPS.second$8nn9, in.read());
         SPropertyOperations.assign(smpteOffset, PROPS.frame$aZOn, in.read());
         SPropertyOperations.assign(smpteOffset, PROPS.fractional_frames$YPsc, in.read());
         ListSequence.fromList(SLinkOperations.getChildren(track, LINKS.events$fAV3)).addElement(smpteOffset);
@@ -399,6 +400,7 @@ public class BytesToMidi {
         }
 
         SNode keySig = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L, "Midi.structure.KeySignature"));
+        SPropertyOperations.assign(keySig, PROPS.deltaTime$wbRX, deltaTime);
         switch (in.read()) {
           case 0xF9:
             SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x7c255ef756ebb7e5L, "flats_7"));
@@ -520,10 +522,11 @@ public class BytesToMidi {
     } else if (evtKey == 11110000) {
       SNode msg = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fdafb1eL, "Midi.structure.SystemExclusiveMessage"));
       int curr = in.read();
-      while (curr != 0b11110111) {
+      while (curr != 0b11110111 && curr != -1) {
         SNode b = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22f867851L, "Midi.structure.Byte"));
         SPropertyOperations.assign(b, PROPS.data$Xqfh, curr);
         ListSequence.fromList(SLinkOperations.getChildren(msg, LINKS.data$GgGl)).addElement(b);
+        curr = in.read();
       }
       ListSequence.fromList(SLinkOperations.getChildren(track, LINKS.events$fAV3)).addElement(msg);
     }
@@ -541,7 +544,7 @@ public class BytesToMidi {
 
     int latestVal = in.read();
     LinkedListSequence.fromLinkedListNew(numComps).addElement(latestVal);
-    while ((latestVal & 0b10000000) > 0) {
+    while ((latestVal & 0b10000000) > 0 && latestVal != -1) {
       latestVal = in.read();
       LinkedListSequence.fromLinkedListNew(numComps).addElement(latestVal);
     }
@@ -596,6 +599,7 @@ public class BytesToMidi {
     /*package*/ static final SProperty microseconds_per_quarter_note$t7G2 = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e34c5dL, 0x7c255ef756e75757L, "microseconds_per_quarter_note");
     /*package*/ static final SProperty hour$7NVM = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e38587L, 0x7c255ef756e953eaL, "hour");
     /*package*/ static final SProperty minute$87S7 = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e38587L, 0x7c255ef756e95400L, "minute");
+    /*package*/ static final SProperty second$8nn9 = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e38587L, 0x7c255ef756e95418L, "second");
     /*package*/ static final SProperty frame$aZOn = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e38587L, 0x7c255ef756e95431L, "frame");
     /*package*/ static final SProperty fractional_frames$YPsc = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e38587L, 0x7c255ef756ea5761L, "fractional_frames");
     /*package*/ static final SProperty numerator$mlAp = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3c574L, 0x7c255ef756eb2624L, "numerator");
