@@ -630,8 +630,8 @@
   <node concept="1TIwiD" id="7K_nJtmS_Qx">
     <property role="EcuMT" value="8945660651248967073" />
     <property role="3GE5qa" value="Events.Meta" />
-    <property role="TrG5h" value="MarkerText" />
-    <property role="34LRSv" value="marker_text" />
+    <property role="TrG5h" value="Marker" />
+    <property role="34LRSv" value="marker" />
     <ref role="1TJDcQ" node="7K_nJtmuI_2" resolve="MetaEvent" />
   </node>
   <node concept="1TIwiD" id="7K_nJtmSDCC">
@@ -754,6 +754,13 @@
     <property role="TrG5h" value="SequencerSpecificEvent" />
     <property role="34LRSv" value="sequencer_specific_event" />
     <ref role="1TJDcQ" node="7K_nJtmuI_2" resolve="MetaEvent" />
+    <node concept="1TJgyj" id="6SoZt8JxBxm" role="1TKVEi">
+      <property role="IQ2ns" value="7933369822795429974" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="bytes" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="6SoZt8JxBxh" resolve="Byte" />
+    </node>
   </node>
   <node concept="25R3W" id="7K_nJtmUVv$">
     <property role="3F6X1D" value="8945660651249580004" />
@@ -792,6 +799,55 @@
       <property role="3tVfz5" value="8945660651249580225" />
       <property role="TrG5h" value="minor" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="6SoZt8JxBxh">
+    <property role="EcuMT" value="7933369822795429969" />
+    <property role="3GE5qa" value="Values" />
+    <property role="TrG5h" value="Byte" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="6SoZt8JxBxj" role="1TKVEl">
+      <property role="IQ2nx" value="7933369822795429971" />
+      <property role="TrG5h" value="data" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="PrWs8" id="6SoZt8JRiVY" role="PzmwI">
+      <ref role="PrY4T" node="7K_nJtmDrFC" resolve="ByteSized" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6SoZt8JFXXT">
+    <property role="EcuMT" value="7933369822798143353" />
+    <property role="3GE5qa" value="Values" />
+    <property role="TrG5h" value="Pressure" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="6SoZt8JFXXU" role="PzmwI">
+      <ref role="PrY4T" node="7K_nJtmuIAG" resolve="Pressurable" />
+    </node>
+    <node concept="1TJgyi" id="6SoZt8JFXYu" role="1TKVEl">
+      <property role="IQ2nx" value="7933369822798143390" />
+      <property role="TrG5h" value="pressure" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6SoZt8JQJGu">
+    <property role="EcuMT" value="7933369822800968478" />
+    <property role="3GE5qa" value="Events.SystemCommonMessages" />
+    <property role="TrG5h" value="SystemExclusiveMessage" />
+    <property role="34LRSv" value="system_exclusive_message" />
+    <ref role="1TJDcQ" node="6SoZt8JQJGB" resolve="SystemCommonMessage" />
+    <node concept="1TJgyj" id="6SoZt8JQJG$" role="1TKVEi">
+      <property role="IQ2ns" value="7933369822800968484" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="data" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="6SoZt8JxBxh" resolve="Byte" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6SoZt8JQJGB">
+    <property role="EcuMT" value="7933369822800968487" />
+    <property role="3GE5qa" value="Events" />
+    <property role="TrG5h" value="SystemCommonMessage" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" node="7K_nJtmuI$E" resolve="TrackEvent" />
   </node>
 </model>
 

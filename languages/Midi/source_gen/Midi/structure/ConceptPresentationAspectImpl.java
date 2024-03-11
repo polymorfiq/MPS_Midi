@@ -9,6 +9,7 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_Byte;
   private ConceptPresentation props_ByteSized;
   private ConceptPresentation props_ChannelMode;
   private ConceptPresentation props_ChannelPressure;
@@ -29,7 +30,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_KeySignature;
   private ConceptPresentation props_Keyable;
   private ConceptPresentation props_LyricText;
-  private ConceptPresentation props_MarkerText;
+  private ConceptPresentation props_Marker;
   private ConceptPresentation props_MetaEvent;
   private ConceptPresentation props_MidiChannelPrefixAssignment;
   private ConceptPresentation props_MidiEvent;
@@ -39,6 +40,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PitchWheelChange;
   private ConceptPresentation props_PolyphonicKeyPressure;
   private ConceptPresentation props_Pressurable;
+  private ConceptPresentation props_Pressure;
   private ConceptPresentation props_ProgramChange;
   private ConceptPresentation props_SequenceNumber;
   private ConceptPresentation props_SequenceOrTrackName;
@@ -46,6 +48,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SetTempo;
   private ConceptPresentation props_SmpteOffset;
   private ConceptPresentation props_SysexEvent;
+  private ConceptPresentation props_SystemCommonMessage;
+  private ConceptPresentation props_SystemExclusiveMessage;
   private ConceptPresentation props_TextEvent;
   private ConceptPresentation props_TicksPerQuarterNote;
   private ConceptPresentation props_TimeSignature;
@@ -61,6 +65,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.Byte:
+        if (props_Byte == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Byte");
+          props_Byte = cpb.create();
+        }
+        return props_Byte;
       case LanguageConceptSwitch.ByteSized:
         if (props_ByteSized == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -199,13 +210,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_LyricText = cpb.create();
         }
         return props_LyricText;
-      case LanguageConceptSwitch.MarkerText:
-        if (props_MarkerText == null) {
+      case LanguageConceptSwitch.Marker:
+        if (props_Marker == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("marker_text");
-          props_MarkerText = cpb.create();
+          cpb.rawPresentation("marker");
+          props_Marker = cpb.create();
         }
-        return props_MarkerText;
+        return props_Marker;
       case LanguageConceptSwitch.MetaEvent:
         if (props_MetaEvent == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -270,6 +281,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Pressurable = cpb.create();
         }
         return props_Pressurable;
+      case LanguageConceptSwitch.Pressure:
+        if (props_Pressure == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Pressure");
+          props_Pressure = cpb.create();
+        }
+        return props_Pressure;
       case LanguageConceptSwitch.ProgramChange:
         if (props_ProgramChange == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -319,6 +337,19 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SysexEvent = cpb.create();
         }
         return props_SysexEvent;
+      case LanguageConceptSwitch.SystemCommonMessage:
+        if (props_SystemCommonMessage == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_SystemCommonMessage = cpb.create();
+        }
+        return props_SystemCommonMessage;
+      case LanguageConceptSwitch.SystemExclusiveMessage:
+        if (props_SystemExclusiveMessage == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("system_exclusive_message");
+          props_SystemExclusiveMessage = cpb.create();
+        }
+        return props_SystemExclusiveMessage;
       case LanguageConceptSwitch.TextEvent:
         if (props_TextEvent == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

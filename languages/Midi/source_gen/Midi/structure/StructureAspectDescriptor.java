@@ -16,6 +16,7 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptByte = createDescriptorForByte();
   /*package*/ final ConceptDescriptor myConceptByteSized = createDescriptorForByteSized();
   /*package*/ final ConceptDescriptor myConceptChannelMode = createDescriptorForChannelMode();
   /*package*/ final ConceptDescriptor myConceptChannelPressure = createDescriptorForChannelPressure();
@@ -36,7 +37,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptKeySignature = createDescriptorForKeySignature();
   /*package*/ final ConceptDescriptor myConceptKeyable = createDescriptorForKeyable();
   /*package*/ final ConceptDescriptor myConceptLyricText = createDescriptorForLyricText();
-  /*package*/ final ConceptDescriptor myConceptMarkerText = createDescriptorForMarkerText();
+  /*package*/ final ConceptDescriptor myConceptMarker = createDescriptorForMarker();
   /*package*/ final ConceptDescriptor myConceptMetaEvent = createDescriptorForMetaEvent();
   /*package*/ final ConceptDescriptor myConceptMidiChannelPrefixAssignment = createDescriptorForMidiChannelPrefixAssignment();
   /*package*/ final ConceptDescriptor myConceptMidiEvent = createDescriptorForMidiEvent();
@@ -46,6 +47,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptPitchWheelChange = createDescriptorForPitchWheelChange();
   /*package*/ final ConceptDescriptor myConceptPolyphonicKeyPressure = createDescriptorForPolyphonicKeyPressure();
   /*package*/ final ConceptDescriptor myConceptPressurable = createDescriptorForPressurable();
+  /*package*/ final ConceptDescriptor myConceptPressure = createDescriptorForPressure();
   /*package*/ final ConceptDescriptor myConceptProgramChange = createDescriptorForProgramChange();
   /*package*/ final ConceptDescriptor myConceptSequenceNumber = createDescriptorForSequenceNumber();
   /*package*/ final ConceptDescriptor myConceptSequenceOrTrackName = createDescriptorForSequenceOrTrackName();
@@ -53,6 +55,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptSetTempo = createDescriptorForSetTempo();
   /*package*/ final ConceptDescriptor myConceptSmpteOffset = createDescriptorForSmpteOffset();
   /*package*/ final ConceptDescriptor myConceptSysexEvent = createDescriptorForSysexEvent();
+  /*package*/ final ConceptDescriptor myConceptSystemCommonMessage = createDescriptorForSystemCommonMessage();
+  /*package*/ final ConceptDescriptor myConceptSystemExclusiveMessage = createDescriptorForSystemExclusiveMessage();
   /*package*/ final ConceptDescriptor myConceptTextEvent = createDescriptorForTextEvent();
   /*package*/ final ConceptDescriptor myConceptTicksPerQuarterNote = createDescriptorForTicksPerQuarterNote();
   /*package*/ final ConceptDescriptor myConceptTimeSignature = createDescriptorForTimeSignature();
@@ -82,13 +86,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptByteSized, myConceptChannelMode, myConceptChannelPressure, myConceptChunk, myConceptControlChange, myConceptController, myConceptControllerValuable, myConceptControllerValue, myConceptControllerable, myConceptCopyrightNotice, myConceptCuePoint, myConceptEmptyTrackEvent, myConceptEndOfTrack, myConceptFile, myConceptHeader, myConceptInstrumentName, myConceptKeyCode, myConceptKeySignature, myConceptKeyable, myConceptLyricText, myConceptMarkerText, myConceptMetaEvent, myConceptMidiChannelPrefixAssignment, myConceptMidiEvent, myConceptNote, myConceptNoteOff, myConceptNoteOn, myConceptPitchWheelChange, myConceptPolyphonicKeyPressure, myConceptPressurable, myConceptProgramChange, myConceptSequenceNumber, myConceptSequenceOrTrackName, myConceptSequencerSpecificEvent, myConceptSetTempo, myConceptSmpteOffset, myConceptSysexEvent, myConceptTextEvent, myConceptTicksPerQuarterNote, myConceptTimeSignature, myConceptTimecode, myConceptTrack, myConceptTrackDivision, myConceptTrackEvent, myConceptVelocityValue, myConceptVelocityable);
+    return Arrays.asList(myConceptByte, myConceptByteSized, myConceptChannelMode, myConceptChannelPressure, myConceptChunk, myConceptControlChange, myConceptController, myConceptControllerValuable, myConceptControllerValue, myConceptControllerable, myConceptCopyrightNotice, myConceptCuePoint, myConceptEmptyTrackEvent, myConceptEndOfTrack, myConceptFile, myConceptHeader, myConceptInstrumentName, myConceptKeyCode, myConceptKeySignature, myConceptKeyable, myConceptLyricText, myConceptMarker, myConceptMetaEvent, myConceptMidiChannelPrefixAssignment, myConceptMidiEvent, myConceptNote, myConceptNoteOff, myConceptNoteOn, myConceptPitchWheelChange, myConceptPolyphonicKeyPressure, myConceptPressurable, myConceptPressure, myConceptProgramChange, myConceptSequenceNumber, myConceptSequenceOrTrackName, myConceptSequencerSpecificEvent, myConceptSetTempo, myConceptSmpteOffset, myConceptSysexEvent, myConceptSystemCommonMessage, myConceptSystemExclusiveMessage, myConceptTextEvent, myConceptTicksPerQuarterNote, myConceptTimeSignature, myConceptTimecode, myConceptTrack, myConceptTrackDivision, myConceptTrackEvent, myConceptVelocityValue, myConceptVelocityable);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.Byte:
+        return myConceptByte;
       case LanguageConceptSwitch.ByteSized:
         return myConceptByteSized;
       case LanguageConceptSwitch.ChannelMode:
@@ -129,8 +135,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptKeyable;
       case LanguageConceptSwitch.LyricText:
         return myConceptLyricText;
-      case LanguageConceptSwitch.MarkerText:
-        return myConceptMarkerText;
+      case LanguageConceptSwitch.Marker:
+        return myConceptMarker;
       case LanguageConceptSwitch.MetaEvent:
         return myConceptMetaEvent;
       case LanguageConceptSwitch.MidiChannelPrefixAssignment:
@@ -149,6 +155,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPolyphonicKeyPressure;
       case LanguageConceptSwitch.Pressurable:
         return myConceptPressurable;
+      case LanguageConceptSwitch.Pressure:
+        return myConceptPressure;
       case LanguageConceptSwitch.ProgramChange:
         return myConceptProgramChange;
       case LanguageConceptSwitch.SequenceNumber:
@@ -163,6 +171,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptSmpteOffset;
       case LanguageConceptSwitch.SysexEvent:
         return myConceptSysexEvent;
+      case LanguageConceptSwitch.SystemCommonMessage:
+        return myConceptSystemCommonMessage;
+      case LanguageConceptSwitch.SystemExclusiveMessage:
+        return myConceptSystemExclusiveMessage;
       case LanguageConceptSwitch.TextEvent:
         return myConceptTextEvent;
       case LanguageConceptSwitch.TicksPerQuarterNote:
@@ -195,6 +207,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForByte() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "Byte", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22f867851L);
+    b.class_(false, false, false);
+    b.parent(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756a5bae8L);
+    b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/7933369822795429969");
+    b.version(3);
+    b.property("data", 0x6e18fdd22f867853L).type(PrimitiveTypeId.INTEGER).origin("7933369822795429971").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForByteSized() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "ByteSized", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756a5bae8L);
     b.interface_();
@@ -391,14 +412,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("lyric_text");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForMarkerText() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "MarkerText", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e25da1L);
+  private static ConceptDescriptor createDescriptorForMarker() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "Marker", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e25da1L);
     b.class_(false, false, false);
     // extends: Midi.structure.MetaEvent
     b.super_(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L);
     b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651248967073");
     b.version(3);
-    b.alias("marker_text");
+    b.alias("marker");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForMetaEvent() {
@@ -502,6 +523,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForPressure() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "Pressure", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fafdf79L);
+    b.class_(false, false, false);
+    b.parent(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9acL);
+    b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/7933369822798143353");
+    b.version(3);
+    b.property("pressure", 0x6e18fdd22fafdf9eL).type(PrimitiveTypeId.INTEGER).origin("7933369822798143390").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForProgramChange() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "ProgramChange", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9a7L);
     b.class_(false, false, false);
@@ -541,6 +571,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L);
     b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651249088599");
     b.version(3);
+    b.aggregate("bytes", 0x6e18fdd22f867856L).target(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22f867851L).optional(true).ordered(true).multiple(true).origin("7933369822795429974").done();
     b.alias("sequencer_specific_event");
     return b.create();
   }
@@ -578,6 +609,26 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651242187067");
     b.version(3);
     b.alias("sysex");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForSystemCommonMessage() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "SystemCommonMessage", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fdafb27L);
+    b.class_(false, true, false);
+    // extends: Midi.structure.TrackEvent
+    b.super_(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae92aL);
+    b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/7933369822800968487");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForSystemExclusiveMessage() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "SystemExclusiveMessage", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fdafb1eL);
+    b.class_(false, false, false);
+    // extends: Midi.structure.SystemCommonMessage
+    b.super_(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fdafb27L);
+    b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/7933369822800968478");
+    b.version(3);
+    b.aggregate("data", 0x6e18fdd22fdafb24L).target(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22f867851L).optional(true).ordered(true).multiple(true).origin("7933369822800968484").done();
+    b.alias("system_exclusive_message");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTextEvent() {

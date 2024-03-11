@@ -13,15 +13,16 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import jetbrains.mps.lang.smodel.EnumerationLiteralsIndex;
-import org.jetbrains.mps.openapi.language.SProperty;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
-public final class Timecode__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a573L, "Midi.structure.Timecode");
+public final class SystemExclusiveMessage__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fdafb1eL, "Midi.structure.SystemExclusiveMessage");
 
   public static final SMethod<Integer> byte_size_id7K_nJtmDrJf = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("byte_size").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651244993487L).languageId(0xaa863ed1bd51d7c6L, 0x35a3fd90d0264551L).build2();
   public static final SMethod<byte[]> bytes_id7K_nJtmDrGV = new SMethodBuilder<byte[]>(new SJavaCompoundTypeImpl(byte[].class)).name("bytes").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651244993339L).languageId(0xaa863ed1bd51d7c6L, 0x35a3fd90d0264551L).build2();
@@ -32,33 +33,28 @@ public final class Timecode__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static int byte_size_id7K_nJtmDrJf(@NotNull SNode __thisNode__) {
-    return 2;
+    return 2 + ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.data$GgGl)).count();
   }
   /*package*/ static byte[] bytes_id7K_nJtmDrGV(@NotNull SNode __thisNode__) {
-    byte timeCode = 0x00;
-    switch (enumSwitchIndex.indexNullable(SPropertyOperations.getEnum(__thisNode__, PROPS.rate$Ng0N))) {
-      case 0:
-        timeCode = 0b111000;
-        break;
-      case 1:
-        timeCode = 0b111001;
-        break;
-      case 2:
-        timeCode = 0b111101;
-        break;
-      case 3:
-        timeCode = 0b111110;
-        break;
-    }
+    final byte[] bytes = new byte[((int) ByteSized__BehaviorDescriptor.byte_size_id7K_nJtmDrJf.invoke(__thisNode__))];
 
-    byte highByte = timeCode;
+    final Wrappers._int i = new Wrappers._int(0);
+    byte key = (byte) 0b11110000;
+    System.arraycopy(new byte[]{key}, 0, bytes, i.value, 1);
+    i.value += 1;
 
-    byte lowByte = (byte) (SPropertyOperations.getInteger(__thisNode__, PROPS.ticks_per_frame$NgHQ) & 0b11111111);
+    ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.data$GgGl)).visitAll((b) -> {
+      System.arraycopy(ByteSized__BehaviorDescriptor.bytes_id7K_nJtmDrGV.invoke(b), 0, bytes, i.value, 1);
+      i.value += 1;
+    });
 
-    return new byte[]{highByte, lowByte};
+    byte endByte = (byte) 0b11110111;
+    bytes[i.value] = endByte;
+
+    return bytes;
   }
 
-  /*package*/ Timecode__BehaviorDescriptor() {
+  /*package*/ SystemExclusiveMessage__BehaviorDescriptor() {
   }
 
   @Override
@@ -105,10 +101,8 @@ public final class Timecode__BehaviorDescriptor extends BaseBHDescriptor {
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static final EnumerationLiteralsIndex enumSwitchIndex = EnumerationLiteralsIndex.build(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a576L, 0x7c255ef75678a57fL, 0x7c255ef75678a582L, 0x7c255ef75678a587L, 0x7c255ef75678a58eL);
 
-  private static final class PROPS {
-    /*package*/ static final SProperty rate$Ng0N = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a573L, 0x7c255ef75678a598L, "rate");
-    /*package*/ static final SProperty ticks_per_frame$NgHQ = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a573L, 0x7c255ef75678a59bL, "ticks_per_frame");
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink data$GgGl = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fdafb1eL, 0x6e18fdd22fdafb24L, "data");
   }
 }

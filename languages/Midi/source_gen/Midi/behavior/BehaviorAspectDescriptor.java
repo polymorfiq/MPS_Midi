@@ -12,6 +12,9 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
+  private final BHDescriptor myByte__BehaviorDescriptor = new Byte__BehaviorDescriptor();
+  private final BHDescriptor myPressure__BehaviorDescriptor = new Pressure__BehaviorDescriptor();
+  private final BHDescriptor mySystemExclusiveMessage__BehaviorDescriptor = new SystemExclusiveMessage__BehaviorDescriptor();
   private final BHDescriptor myFile__BehaviorDescriptor = new File__BehaviorDescriptor();
   private final BHDescriptor myHeader__BehaviorDescriptor = new Header__BehaviorDescriptor();
   private final BHDescriptor myTrack__BehaviorDescriptor = new Track__BehaviorDescriptor();
@@ -45,7 +48,7 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor mySequenceOrTrackName__BehaviorDescriptor = new SequenceOrTrackName__BehaviorDescriptor();
   private final BHDescriptor myInstrumentName__BehaviorDescriptor = new InstrumentName__BehaviorDescriptor();
   private final BHDescriptor myLyricText__BehaviorDescriptor = new LyricText__BehaviorDescriptor();
-  private final BHDescriptor myMarkerText__BehaviorDescriptor = new MarkerText__BehaviorDescriptor();
+  private final BHDescriptor myMarker__BehaviorDescriptor = new Marker__BehaviorDescriptor();
   private final BHDescriptor myCuePoint__BehaviorDescriptor = new CuePoint__BehaviorDescriptor();
   private final BHDescriptor myMidiChannelPrefixAssignment__BehaviorDescriptor = new MidiChannelPrefixAssignment__BehaviorDescriptor();
   private final BHDescriptor myEndOfTrack__BehaviorDescriptor = new EndOfTrack__BehaviorDescriptor();
@@ -63,92 +66,98 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return myByteSized__BehaviorDescriptor;
+        return myByte__BehaviorDescriptor;
       case 1:
-        return myChannelMode__BehaviorDescriptor;
+        return myByteSized__BehaviorDescriptor;
       case 2:
-        return myChannelPressure__BehaviorDescriptor;
+        return myChannelMode__BehaviorDescriptor;
       case 3:
-        return myControlChange__BehaviorDescriptor;
+        return myChannelPressure__BehaviorDescriptor;
       case 4:
-        return myController__BehaviorDescriptor;
+        return myControlChange__BehaviorDescriptor;
       case 5:
-        return myControllerValuable__BehaviorDescriptor;
+        return myController__BehaviorDescriptor;
       case 6:
-        return myControllerValue__BehaviorDescriptor;
+        return myControllerValuable__BehaviorDescriptor;
       case 7:
-        return myControllerable__BehaviorDescriptor;
+        return myControllerValue__BehaviorDescriptor;
       case 8:
-        return myCopyrightNotice__BehaviorDescriptor;
+        return myControllerable__BehaviorDescriptor;
       case 9:
-        return myCuePoint__BehaviorDescriptor;
+        return myCopyrightNotice__BehaviorDescriptor;
       case 10:
-        return myEmptyTrackEvent__BehaviorDescriptor;
+        return myCuePoint__BehaviorDescriptor;
       case 11:
-        return myEndOfTrack__BehaviorDescriptor;
+        return myEmptyTrackEvent__BehaviorDescriptor;
       case 12:
-        return myFile__BehaviorDescriptor;
+        return myEndOfTrack__BehaviorDescriptor;
       case 13:
-        return myHeader__BehaviorDescriptor;
+        return myFile__BehaviorDescriptor;
       case 14:
-        return myInstrumentName__BehaviorDescriptor;
+        return myHeader__BehaviorDescriptor;
       case 15:
-        return myKeyCode__BehaviorDescriptor;
+        return myInstrumentName__BehaviorDescriptor;
       case 16:
-        return myKeySignature__BehaviorDescriptor;
+        return myKeyCode__BehaviorDescriptor;
       case 17:
-        return myKeyable__BehaviorDescriptor;
+        return myKeySignature__BehaviorDescriptor;
       case 18:
-        return myLyricText__BehaviorDescriptor;
+        return myKeyable__BehaviorDescriptor;
       case 19:
-        return myMarkerText__BehaviorDescriptor;
+        return myLyricText__BehaviorDescriptor;
       case 20:
-        return myMetaEvent__BehaviorDescriptor;
+        return myMarker__BehaviorDescriptor;
       case 21:
-        return myMidiChannelPrefixAssignment__BehaviorDescriptor;
+        return myMetaEvent__BehaviorDescriptor;
       case 22:
-        return myNote__BehaviorDescriptor;
+        return myMidiChannelPrefixAssignment__BehaviorDescriptor;
       case 23:
-        return myNoteOff__BehaviorDescriptor;
+        return myNote__BehaviorDescriptor;
       case 24:
-        return myNoteOn__BehaviorDescriptor;
+        return myNoteOff__BehaviorDescriptor;
       case 25:
-        return myPitchWheelChange__BehaviorDescriptor;
+        return myNoteOn__BehaviorDescriptor;
       case 26:
-        return myPolyphonicKeyPressure__BehaviorDescriptor;
+        return myPitchWheelChange__BehaviorDescriptor;
       case 27:
-        return myPressurable__BehaviorDescriptor;
+        return myPolyphonicKeyPressure__BehaviorDescriptor;
       case 28:
-        return myProgramChange__BehaviorDescriptor;
+        return myPressurable__BehaviorDescriptor;
       case 29:
-        return mySequenceNumber__BehaviorDescriptor;
+        return myPressure__BehaviorDescriptor;
       case 30:
-        return mySequenceOrTrackName__BehaviorDescriptor;
+        return myProgramChange__BehaviorDescriptor;
       case 31:
-        return mySequencerSpecificEvent__BehaviorDescriptor;
+        return mySequenceNumber__BehaviorDescriptor;
       case 32:
-        return mySetTempo__BehaviorDescriptor;
+        return mySequenceOrTrackName__BehaviorDescriptor;
       case 33:
-        return mySmpteOffset__BehaviorDescriptor;
+        return mySequencerSpecificEvent__BehaviorDescriptor;
       case 34:
-        return mySysexEvent__BehaviorDescriptor;
+        return mySetTempo__BehaviorDescriptor;
       case 35:
-        return myTextEvent__BehaviorDescriptor;
+        return mySmpteOffset__BehaviorDescriptor;
       case 36:
-        return myTicksPerQuarterNote__BehaviorDescriptor;
+        return mySysexEvent__BehaviorDescriptor;
       case 37:
-        return myTimeSignature__BehaviorDescriptor;
+        return mySystemExclusiveMessage__BehaviorDescriptor;
       case 38:
-        return myTimecode__BehaviorDescriptor;
+        return myTextEvent__BehaviorDescriptor;
       case 39:
-        return myTrack__BehaviorDescriptor;
+        return myTicksPerQuarterNote__BehaviorDescriptor;
       case 40:
-        return myVelocityValue__BehaviorDescriptor;
+        return myTimeSignature__BehaviorDescriptor;
       case 41:
+        return myTimecode__BehaviorDescriptor;
+      case 42:
+        return myTrack__BehaviorDescriptor;
+      case 43:
+        return myVelocityValue__BehaviorDescriptor;
+      case 44:
         return myVelocityable__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756a5bae8L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9c4L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9b2L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae987L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae996L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae99dL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae99eL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae995L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e1609bL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e29a28L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567cf8faL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e30ce1L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53cL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53dL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e1f0fbL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae958L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e22a4bL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e25da1L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e2d382L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756842bb2L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae96fL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9bbL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae974L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9acL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9a7L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756dd9414L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e198e1L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e43857L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e34c5dL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e38587L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae93bL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e108afL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a56bL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3c574L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a573L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53fL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae964L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae963L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22f867851L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756a5bae8L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9c4L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9b2L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae987L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae996L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae99dL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae99eL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae995L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e1609bL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e29a28L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567cf8faL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e30ce1L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53cL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53dL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e1f0fbL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae958L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e22a4bL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e25da1L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e2d382L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756842bb2L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae96fL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9bbL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae974L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9acL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fafdf79L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9a7L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756dd9414L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e198e1L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e43857L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e34c5dL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e38587L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae93bL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fdafb1eL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e108afL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a56bL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3c574L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a573L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53fL), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae964L), MetaIdFactory.conceptId(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae963L)).seal();
 }
