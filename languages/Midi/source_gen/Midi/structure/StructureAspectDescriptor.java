@@ -381,6 +381,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651242187097");
     b.version(3);
     b.property("note_number", 0x7c255ef7567ae95dL).type(PrimitiveTypeId.INTEGER).origin("8945660651242187101").done();
+    b.aggregate("note", 0x585e6537180a3b6aL).target(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL).optional(true).ordered(true).multiple(false).origin("6367638210449390442").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForKeySignature() {

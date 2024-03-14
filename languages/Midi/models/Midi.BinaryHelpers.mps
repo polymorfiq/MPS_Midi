@@ -13,6 +13,7 @@
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="ttqe" ref="r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="sp0e" ref="r:b847a8ff-1a6e-46c5-a114-99a5e0659901(Midi.behavior)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -220,6 +221,7 @@
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="1166648550386" name="jetbrains.mps.lang.smodel.structure.Model_CreateNewRootNodeOperation" flags="nn" index="2xF2bX" />
       <concept id="1143226024141" name="jetbrains.mps.lang.smodel.structure.SModelType" flags="in" index="H_c77" />
       <concept id="1143235216708" name="jetbrains.mps.lang.smodel.structure.Model_CreateNewNodeOperation" flags="nn" index="I8ghe">
@@ -4567,6 +4569,26 @@
                     <node concept="liA8E" id="6SoZt8JCbY9" role="2OqNvi">
                       <ref role="37wK5l" to="guwi:~InputStream.read()" resolve="read" />
                     </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="5xupjso38NX" role="3cqZAp">
+              <node concept="37vLTI" id="5xupjso3dYI" role="3clFbG">
+                <node concept="2OqwBi" id="5xupjso3g8p" role="37vLTx">
+                  <node concept="37vLTw" id="5xupjso3fAX" role="2Oq$k0">
+                    <ref role="3cqZAo" node="6SoZt8JCWxH" resolve="keyCode" />
+                  </node>
+                  <node concept="2qgKlT" id="5xupjso3hPv" role="2OqNvi">
+                    <ref role="37wK5l" to="sp0e:5xupjso1I05" resolve="getNote" />
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="5xupjso3a__" role="37vLTJ">
+                  <node concept="37vLTw" id="5xupjso38NV" role="2Oq$k0">
+                    <ref role="3cqZAo" node="6SoZt8JCWxH" resolve="keyCode" />
+                  </node>
+                  <node concept="3TrEf2" id="5xupjso3dl6" role="2OqNvi">
+                    <ref role="3Tt5mk" to="ttqe:5xupjso2zHE" resolve="note" />
                   </node>
                 </node>
               </node>

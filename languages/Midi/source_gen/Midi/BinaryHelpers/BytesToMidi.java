@@ -19,6 +19,7 @@ import java.util.Objects;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import Midi.behavior.KeyCode__BehaviorDescriptor;
 import java.util.Deque;
 import jetbrains.mps.internal.collections.runtime.LinkedListSequence;
 import java.util.LinkedList;
@@ -440,6 +441,7 @@ public class BytesToMidi {
       SPropertyOperations.assign(evt, PROPS.deltaTime$wbRX, deltaTime);
       SNode keyCode = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L, "Midi.structure.KeyCode"));
       SPropertyOperations.assign(keyCode, PROPS.note_number$z1Zu, in.read() & 0b01111111);
+      SLinkOperations.setTarget(keyCode, LINKS.note$wVJt, KeyCode__BehaviorDescriptor.getNote_id5xupjso1I05.invoke(keyCode));
       SLinkOperations.setTarget(evt, LINKS.key$z2G2, keyCode);
 
       SNode velocity = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae964L, "Midi.structure.VelocityValue"));
@@ -632,6 +634,7 @@ public class BytesToMidi {
     /*package*/ static final SContainmentLink division$s8vF = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53dL, 0x7c255ef756792641L, "division");
     /*package*/ static final SContainmentLink events$fAV3 = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53fL, 0x7c255ef7567ae9f6L, "events");
     /*package*/ static final SContainmentLink bytes$T7bc = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e43857L, 0x6e18fdd22f867856L, "bytes");
+    /*package*/ static final SContainmentLink note$wVJt = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L, 0x585e6537180a3b6aL, "note");
     /*package*/ static final SContainmentLink key$z2G2 = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL, 0x7c255ef7567ae961L, "key");
     /*package*/ static final SContainmentLink velocity$z9gu = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL, 0x7c255ef7567ae968L, "velocity");
     /*package*/ static final SContainmentLink key$zlHK = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae96fL, 0x7c255ef7567ae970L, "key");

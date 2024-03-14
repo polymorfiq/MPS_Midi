@@ -9,11 +9,13 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -23,14 +25,62 @@ public final class KeyCode__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L, "Midi.structure.KeyCode");
 
   public static final SMethod<Integer> note_number_id7K_nJtmx2Jg = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("note_number").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651242793936L).languageId(0xaa863ed1bd51d7c6L, 0x35a3fd90d0264551L).build2();
+  public static final SMethod<SNode> getNote_id5xupjso1I05 = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getNote").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(6367638210449170437L).languageId(0xaa863ed1bd51d7c6L, 0x35a3fd90d0264551L).build2();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(note_number_id7K_nJtmx2Jg);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(note_number_id7K_nJtmx2Jg, getNote_id5xupjso1I05);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static int note_number_id7K_nJtmx2Jg(@NotNull SNode __thisNode__) {
     return SPropertyOperations.getInteger(__thisNode__, PROPS.note_number$z1Zu);
+  }
+  /*package*/ static SNode getNote_id5xupjso1I05(@NotNull SNode __thisNode__) {
+    SNode note = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL, "MusicTheoryLang.structure.Note"));
+    int noteIdx = SPropertyOperations.getInteger(__thisNode__, PROPS.note_number$z1Zu) % 12;
+    int octaveIdx = (int) Math.floor(SPropertyOperations.getInteger(__thisNode__, PROPS.note_number$z1Zu) / 12.0d);
+
+    switch (noteIdx) {
+      case 0:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92c0eL, "C"));
+        break;
+      case 1:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92c33L, "CSharp"));
+        break;
+      case 2:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92c83L, "D"));
+        break;
+      case 3:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92c9dL, "DSharp"));
+        break;
+      case 4:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92cc9L, "E"));
+        break;
+      case 5:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92ce6L, "F"));
+        break;
+      case 6:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92cefL, "FSharp"));
+        break;
+      case 7:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92d4dL, "G"));
+        break;
+      case 8:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92d64L, "GSharp"));
+        break;
+      case 9:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92da9L, "A"));
+        break;
+      case 10:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92dcdL, "ASharp"));
+        break;
+      case 11:
+        SPropertyOperations.assignEnum(note, PROPS.name$nBvq, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c92c0dL, "MusicTheoryLang.structure.NoteName"), 0x7c255ef757c92e17L, "B"));
+        break;
+    }
+
+    SPropertyOperations.assign(note, PROPS.octave$3IC9, octaveIdx - 1);
+    return note;
   }
 
   /*package*/ KeyCode__BehaviorDescriptor() {
@@ -50,6 +100,8 @@ public final class KeyCode__BehaviorDescriptor extends BaseBHDescriptor {
     switch (methodIndex) {
       case 0:
         return (T) ((Integer) note_number_id7K_nJtmx2Jg(node));
+      case 1:
+        return (T) ((SNode) getNote_id5xupjso1I05(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -81,5 +133,7 @@ public final class KeyCode__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class PROPS {
     /*package*/ static final SProperty note_number$z1Zu = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L, 0x7c255ef7567ae95dL, "note_number");
+    /*package*/ static final SProperty name$nBvq = MetaAdapterFactory.getProperty(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL, 0x7c255ef757c93052L, "name");
+    /*package*/ static final SProperty octave$3IC9 = MetaAdapterFactory.getProperty(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL, 0x7c255ef757c951a3L, "octave");
   }
 }
