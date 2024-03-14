@@ -14,14 +14,17 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
-import jetbrains.mps.lang.smodel.EnumerationLiteralsIndex;
 import org.jetbrains.mps.openapi.language.SProperty;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
-public final class KeySignature__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L, "Midi.structure.KeySignature");
+public final class UnknownMetaEvent__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x3e52dc57ee82e95eL, "Midi.structure.UnknownMetaEvent");
 
   public static final SMethod<Integer> byte_size_id7K_nJtmDrJf = new SMethodBuilder<Integer>(new SJavaCompoundTypeImpl(Integer.TYPE)).name("byte_size").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651244993487L).languageId(0xaa863ed1bd51d7c6L, 0x35a3fd90d0264551L).build2();
   public static final SMethod<byte[]> bytes_id7K_nJtmDrGV = new SMethodBuilder<byte[]>(new SJavaCompoundTypeImpl(byte[].class)).name("bytes").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8945660651244993339L).languageId(0xaa863ed1bd51d7c6L, 0x35a3fd90d0264551L).build2();
@@ -29,101 +32,43 @@ public final class KeySignature__BehaviorDescriptor extends BaseBHDescriptor {
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(byte_size_id7K_nJtmDrJf, bytes_id7K_nJtmDrGV);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
-    SPropertyOperations.assign(__thisNode__, PROPS.typecode$tQHU, 0x59);
   }
 
   /*package*/ static int byte_size_id7K_nJtmDrJf(@NotNull SNode __thisNode__) {
     byte[] deltaBytes = BinaryHelper.variableLengthQuantity(SPropertyOperations.getInteger(__thisNode__, PROPS.deltaTime$wbRX));
-    byte[] lenBytes = BinaryHelper.variableLengthQuantity(2);
-    return 2 + deltaBytes.length + lenBytes.length + 2;
+    byte[] lenBytes = BinaryHelper.variableLengthQuantity(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.byteData$ryMV)).count());
+
+
+    return 2 + deltaBytes.length + lenBytes.length + ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.byteData$ryMV)).count();
   }
   /*package*/ static byte[] bytes_id7K_nJtmDrGV(@NotNull SNode __thisNode__) {
-    byte[] bytes = new byte[((int) ByteSized__BehaviorDescriptor.byte_size_id7K_nJtmDrJf.invoke(__thisNode__))];
+    final byte[] bytes = new byte[((int) ByteSized__BehaviorDescriptor.byte_size_id7K_nJtmDrJf.invoke(__thisNode__))];
 
-    int i = 0;
+    final Wrappers._int i = new Wrappers._int(0);
     byte[] deltaBytes = BinaryHelper.variableLengthQuantity(SPropertyOperations.getInteger(__thisNode__, PROPS.deltaTime$wbRX));
-    System.arraycopy(deltaBytes, 0, bytes, i, deltaBytes.length);
-    i += deltaBytes.length;
+    System.arraycopy(deltaBytes, 0, bytes, i.value, deltaBytes.length);
+    i.value += deltaBytes.length;
 
-    bytes[i] = (byte) 0xFF;
-    i += 1;
+    bytes[i.value] = (byte) 0xFF;
+    i.value += 1;
 
     byte typeCode = (byte) SPropertyOperations.getInteger(__thisNode__, PROPS.typecode$tQHU);
-    bytes[i] = typeCode;
-    i += 1;
+    bytes[i.value] = typeCode;
+    i.value += 1;
 
-    byte[] lenBytes = BinaryHelper.variableLengthQuantity(2);
-    System.arraycopy(lenBytes, 0, bytes, i, lenBytes.length);
-    i += lenBytes.length;
+    byte[] lenBytes = BinaryHelper.variableLengthQuantity(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.byteData$ryMV)).count());
+    System.arraycopy(lenBytes, 0, bytes, i.value, lenBytes.length);
+    i.value += lenBytes.length;
 
-    byte sf;
-    byte mi = 0;
-    switch (enumSwitchIndex.indexNullable(SPropertyOperations.getEnum(__thisNode__, PROPS.sf$pM$g))) {
-      case 0:
-        sf = -7;
-        break;
-      case 1:
-        sf = -6;
-        break;
-      case 2:
-        sf = -5;
-        break;
-      case 3:
-        sf = -4;
-        break;
-      case 4:
-        sf = -3;
-        break;
-      case 5:
-        sf = -2;
-        break;
-      case 6:
-        sf = -1;
-        break;
-      case 7:
-        sf = 0;
-        break;
-      case 8:
-        sf = 1;
-        break;
-      case 9:
-        sf = 2;
-        break;
-      case 10:
-        sf = 3;
-        break;
-      case 11:
-        sf = 4;
-        break;
-      case 12:
-        sf = 5;
-        break;
-      case 13:
-        sf = 6;
-        break;
-      case 14:
-        sf = 7;
-        break;
-      default:
-        sf = 0;
-        break;
-    }
-
-    switch (enumSwitchIndex1.indexNullable(SPropertyOperations.getEnum(__thisNode__, PROPS.mi$q6w_))) {
-      case 0:
-        mi = 0;
-        break;
-      case 1:
-        mi = 1;
-        break;
-    }
-
-    System.arraycopy(new byte[]{sf, mi}, 0, bytes, i, 2);
+    ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.byteData$ryMV)).visitAll((b) -> {
+      System.arraycopy(ByteSized__BehaviorDescriptor.bytes_id7K_nJtmDrGV.invoke(b), 0, bytes, i.value, 1);
+      i.value += 1;
+    });
 
     return bytes;
   }
 
-  /*package*/ KeySignature__BehaviorDescriptor() {
+  /*package*/ UnknownMetaEvent__BehaviorDescriptor() {
   }
 
   @Override
@@ -170,13 +115,13 @@ public final class KeySignature__BehaviorDescriptor extends BaseBHDescriptor {
   public SAbstractConcept getConcept() {
     return CONCEPT;
   }
-  private static final EnumerationLiteralsIndex enumSwitchIndex = EnumerationLiteralsIndex.build(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, 0x7c255ef756ebb7e5L, 0x3e52dc57ee359d8dL, 0x3e52dc57ee359d94L, 0x3e52dc57ee359d9cL, 0x3e52dc57ee359da5L, 0x3e52dc57ee359dafL, 0x3e52dc57ee359dbaL, 0x7c255ef756ebb837L, 0x7c255ef756ebb850L, 0x3e52dc57ee359e01L, 0x3e52dc57ee359e0dL, 0x3e52dc57ee359e1aL, 0x3e52dc57ee359e28L, 0x3e52dc57ee359e37L, 0x7c255ef756ebb86aL);
-  private static final EnumerationLiteralsIndex enumSwitchIndex1 = EnumerationLiteralsIndex.build(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb890L, 0x7c255ef756ebb891L, 0x7c255ef756ebb8c1L);
 
   private static final class PROPS {
-    /*package*/ static final SProperty typecode$tQHU = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L, 0x7c255ef756e05accL, "typecode");
     /*package*/ static final SProperty deltaTime$wbRX = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae92aL, 0x7c255ef7567ae938L, "deltaTime");
-    /*package*/ static final SProperty sf$pM$g = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L, 0x7c255ef756ebb8e3L, "sf");
-    /*package*/ static final SProperty mi$q6w_ = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L, 0x7c255ef756ebb8f9L, "mi");
+    /*package*/ static final SProperty typecode$tQHU = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L, 0x7c255ef756e05accL, "typecode");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink byteData$ryMV = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x3e52dc57ee82e95eL, 0x3e52dc57ee82e95fL, "byteData");
   }
 }

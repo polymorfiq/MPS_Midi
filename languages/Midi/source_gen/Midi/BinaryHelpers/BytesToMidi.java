@@ -19,7 +19,6 @@ import java.util.Objects;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
-import Midi.behavior.KeyCode__BehaviorDescriptor;
 import java.util.Deque;
 import jetbrains.mps.internal.collections.runtime.LinkedListSequence;
 import java.util.LinkedList;
@@ -200,7 +199,7 @@ public class BytesToMidi {
       } else if (firstEvtByte == 0xFF) {
         readMetaEvent(in, deltaTime, track);
       } else {
-        readMidiEvent(in, deltaTime, track);
+        readMidiEvent(firstEvtByte, in, deltaTime, track);
       }
 
     }
@@ -215,8 +214,9 @@ public class BytesToMidi {
   private static void readMetaEvent(InputStream in, int deltaTime, SNode track) throws IOException, Exception {
     int textLen;
     byte[] textData;
+    int metaTypecode = in.read();
 
-    switch (in.read()) {
+    switch (metaTypecode) {
       case 0x00:
         int seqNumData = in.read();
         if (seqNumData != 0x02) {
@@ -403,19 +403,49 @@ public class BytesToMidi {
         SNode keySig = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L, "Midi.structure.KeySignature"));
         SPropertyOperations.assign(keySig, PROPS.deltaTime$wbRX, deltaTime);
         switch (in.read()) {
-          case 0xF9:
+          case -7:
             SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x7c255ef756ebb7e5L, "flats_7"));
             break;
-          case 0xFF:
-            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x7c255ef756ebb81fL, "flat_1"));
+          case -6:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359d8dL, "flats_6"));
             break;
-          case 0x00:
+          case -5:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359d94L, "flats_5"));
+            break;
+          case -4:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359d9cL, "flats_4"));
+            break;
+          case -3:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359da5L, "flats_3"));
+            break;
+          case -2:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359dafL, "flats_2"));
+            break;
+          case -1:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359dbaL, "flats_1"));
+            break;
+          case 0:
             SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x7c255ef756ebb837L, "key_of_c"));
             break;
-          case 0x01:
-            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x7c255ef756ebb850L, "sharp_1"));
+          case 1:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x7c255ef756ebb850L, "sharps_1"));
             break;
-          case 0x07:
+          case 2:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359e01L, "sharps_2"));
+            break;
+          case 3:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359e0dL, "sharps_3"));
+            break;
+          case 4:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359e1aL, "sharps_4"));
+            break;
+          case 5:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359e28L, "sharps_5"));
+            break;
+          case 6:
+            SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x3e52dc57ee359e37L, "sharps_6"));
+            break;
+          case 7:
             SPropertyOperations.assignEnum(keySig, PROPS.sf$pM$g, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, "Midi.structure.KeySharpFlats"), 0x7c255ef756ebb86aL, "sharps_7"));
             break;
         }
@@ -428,20 +458,33 @@ public class BytesToMidi {
 
         ListSequence.fromList(SLinkOperations.getChildren(track, LINKS.events$fAV3)).addElement(keySig);
         break;
+      default:
+        int unknownMetaEventLength = nextVariableLength(in);
+        byte[] unknownMetaEventData = new byte[unknownMetaEventLength];
+        in.read(unknownMetaEventData);
+
+        SNode unknownMetaEvent = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x3e52dc57ee82e95eL, "Midi.structure.UnknownMetaEvent"));
+        SPropertyOperations.assign(unknownMetaEvent, PROPS.typecode$tQHU, metaTypecode);
+        for (byte currBData : unknownMetaEventData) {
+          SNode byteNode = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22f867851L, "Midi.structure.Byte"));
+          SPropertyOperations.assign(byteNode, PROPS.data$Xqfh, currBData);
+          ListSequence.fromList(SLinkOperations.getChildren(unknownMetaEvent, LINKS.byteData$ryMV)).addElement(byteNode);
+        }
+        ListSequence.fromList(SLinkOperations.getChildren(track, LINKS.events$fAV3)).addElement(unknownMetaEvent);
+
+        break;
+
     }
 
   }
 
-  private static void readMidiEvent(InputStream in, int deltaTime, SNode track) throws IOException {
-    int evtKey = in.read();
-
+  private static void readMidiEvent(int evtKey, InputStream in, int deltaTime, SNode track) throws IOException {
     if ((evtKey & 0b11110000) == 0b10000000) {
       SNode evt = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL, "Midi.structure.NoteOff"));
       SPropertyOperations.assign(evt, PROPS.channel$zFVx, evtKey & 0b00001111);
       SPropertyOperations.assign(evt, PROPS.deltaTime$wbRX, deltaTime);
       SNode keyCode = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L, "Midi.structure.KeyCode"));
       SPropertyOperations.assign(keyCode, PROPS.note_number$z1Zu, in.read() & 0b01111111);
-      SLinkOperations.setTarget(keyCode, LINKS.note$wVJt, KeyCode__BehaviorDescriptor.getNote_id5xupjso1I05.invoke(keyCode));
       SLinkOperations.setTarget(evt, LINKS.key$z2G2, keyCode);
 
       SNode velocity = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae964L, "Midi.structure.VelocityValue"));
@@ -521,7 +564,7 @@ public class BytesToMidi {
         SPropertyOperations.assignEnum(msg, PROPS.mode$BePV, SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae9c6L, "Midi.structure.ChannelModeOptions"), 0x7c255ef7567ae9e7L, "poly_mode_on"));
       }
       ListSequence.fromList(SLinkOperations.getChildren(track, LINKS.events$fAV3)).addElement(msg);
-    } else if (evtKey == 11110000) {
+    } else if (evtKey == 0b11110000) {
       SNode msg = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22fdafb1eL, "Midi.structure.SystemExclusiveMessage"));
       int curr = in.read();
       while (curr != 0b11110111 && curr != -1) {
@@ -546,7 +589,7 @@ public class BytesToMidi {
 
     int latestVal = in.read();
     LinkedListSequence.fromLinkedListNew(numComps).addElement(latestVal);
-    while ((latestVal & 0b10000000) > 0 && latestVal != -1) {
+    while ((latestVal & 0b10000000) != 0 && latestVal != -1) {
       latestVal = in.read();
       LinkedListSequence.fromLinkedListNew(numComps).addElement(latestVal);
     }
@@ -555,22 +598,21 @@ public class BytesToMidi {
       int a = LinkedListSequence.fromLinkedListNew(numComps).getElement(0);
       return a;
     } else if (LinkedListSequence.fromLinkedListNew(numComps).count() == 2) {
-      int a = (LinkedListSequence.fromLinkedListNew(numComps).getElement(0) & 0xFF) << 8;
-      int b = LinkedListSequence.fromLinkedListNew(numComps).getElement(1) & 0xFF;
+      int a = (LinkedListSequence.fromLinkedListNew(numComps).getElement(0) & 0x7F) << 7;
+      int b = LinkedListSequence.fromLinkedListNew(numComps).getElement(1) & 0x7F;
 
       return a | b;
     } else if (LinkedListSequence.fromLinkedListNew(numComps).count() == 3) {
-      int a = (LinkedListSequence.fromLinkedListNew(numComps).getElement(0) & 0xFF) << 16;
-      int b = (LinkedListSequence.fromLinkedListNew(numComps).getElement(1) & 0xFF) << 8;
-      int c = LinkedListSequence.fromLinkedListNew(numComps).getElement(2) & 0xFF;
-
+      int a = (LinkedListSequence.fromLinkedListNew(numComps).getElement(0) & 0x7F) << 14;
+      int b = (LinkedListSequence.fromLinkedListNew(numComps).getElement(1) & 0x7F) << 7;
+      int c = LinkedListSequence.fromLinkedListNew(numComps).getElement(2) & 0x7F;
 
       return a | b | c;
     } else {
-      int a = (LinkedListSequence.fromLinkedListNew(numComps).getElement(0) & 0xFF) << 24;
-      int b = (LinkedListSequence.fromLinkedListNew(numComps).getElement(1) & 0xFF) << 16;
-      int c = (LinkedListSequence.fromLinkedListNew(numComps).getElement(2) & 0xFF) << 8;
-      int d = LinkedListSequence.fromLinkedListNew(numComps).getElement(3) & 0xFF;
+      int a = (LinkedListSequence.fromLinkedListNew(numComps).getElement(0) & 0x7F) << 21;
+      int b = (LinkedListSequence.fromLinkedListNew(numComps).getElement(1) & 0x7F) << 14;
+      int c = (LinkedListSequence.fromLinkedListNew(numComps).getElement(2) & 0x7F) << 7;
+      int d = LinkedListSequence.fromLinkedListNew(numComps).getElement(3) & 0x7F;
 
       return a | b | c | d;
     }
@@ -611,6 +653,7 @@ public class BytesToMidi {
     /*package*/ static final SProperty data$Xqfh = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22f867851L, 0x6e18fdd22f867853L, "data");
     /*package*/ static final SProperty sf$pM$g = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L, 0x7c255ef756ebb8e3L, "sf");
     /*package*/ static final SProperty mi$q6w_ = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e3fef2L, 0x7c255ef756ebb8f9L, "mi");
+    /*package*/ static final SProperty typecode$tQHU = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L, 0x7c255ef756e05accL, "typecode");
     /*package*/ static final SProperty channel$zFVx = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL, 0x7c255ef756f4bfd5L, "channel");
     /*package*/ static final SProperty note_number$z1Zu = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L, 0x7c255ef7567ae95dL, "note_number");
     /*package*/ static final SProperty velocity$zfAR = MetaAdapterFactory.getProperty(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae964L, 0x7c255ef7567ae96cL, "velocity");
@@ -634,7 +677,7 @@ public class BytesToMidi {
     /*package*/ static final SContainmentLink division$s8vF = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53dL, 0x7c255ef756792641L, "division");
     /*package*/ static final SContainmentLink events$fAV3 = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef75678a53fL, 0x7c255ef7567ae9f6L, "events");
     /*package*/ static final SContainmentLink bytes$T7bc = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e43857L, 0x6e18fdd22f867856L, "bytes");
-    /*package*/ static final SContainmentLink note$wVJt = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae959L, 0x585e6537180a3b6aL, "note");
+    /*package*/ static final SContainmentLink byteData$ryMV = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x3e52dc57ee82e95eL, 0x3e52dc57ee82e95fL, "byteData");
     /*package*/ static final SContainmentLink key$z2G2 = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL, 0x7c255ef7567ae961L, "key");
     /*package*/ static final SContainmentLink velocity$z9gu = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae94eL, 0x7c255ef7567ae968L, "velocity");
     /*package*/ static final SContainmentLink key$zlHK = MetaAdapterFactory.getContainmentLink(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae96fL, 0x7c255ef7567ae970L, "key");

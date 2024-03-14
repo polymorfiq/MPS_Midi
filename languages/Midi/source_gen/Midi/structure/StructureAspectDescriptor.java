@@ -64,6 +64,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptTrack = createDescriptorForTrack();
   /*package*/ final ConceptDescriptor myConceptTrackDivision = createDescriptorForTrackDivision();
   /*package*/ final ConceptDescriptor myConceptTrackEvent = createDescriptorForTrackEvent();
+  /*package*/ final ConceptDescriptor myConceptUnknownMetaEvent = createDescriptorForUnknownMetaEvent();
   /*package*/ final ConceptDescriptor myConceptVelocityValue = createDescriptorForVelocityValue();
   /*package*/ final ConceptDescriptor myConceptVelocityable = createDescriptorForVelocityable();
   /*package*/ final EnumerationDescriptor myEnumerationChannelModeOptions = new EnumerationDescriptor_ChannelModeOptions();
@@ -86,7 +87,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptByte, myConceptByteSized, myConceptChannelMode, myConceptChannelPressure, myConceptChunk, myConceptControlChange, myConceptController, myConceptControllerValuable, myConceptControllerValue, myConceptControllerable, myConceptCopyrightNotice, myConceptCuePoint, myConceptEmptyTrackEvent, myConceptEndOfTrack, myConceptFile, myConceptHeader, myConceptInstrumentName, myConceptKeyCode, myConceptKeySignature, myConceptKeyable, myConceptLyricText, myConceptMarker, myConceptMetaEvent, myConceptMidiChannelPrefixAssignment, myConceptMidiEvent, myConceptNote, myConceptNoteOff, myConceptNoteOn, myConceptPitchWheelChange, myConceptPolyphonicKeyPressure, myConceptPressurable, myConceptPressure, myConceptProgramChange, myConceptSequenceNumber, myConceptSequenceOrTrackName, myConceptSequencerSpecificEvent, myConceptSetTempo, myConceptSmpteOffset, myConceptSysexEvent, myConceptSystemCommonMessage, myConceptSystemExclusiveMessage, myConceptTextEvent, myConceptTicksPerQuarterNote, myConceptTimeSignature, myConceptTimecode, myConceptTrack, myConceptTrackDivision, myConceptTrackEvent, myConceptVelocityValue, myConceptVelocityable);
+    return Arrays.asList(myConceptByte, myConceptByteSized, myConceptChannelMode, myConceptChannelPressure, myConceptChunk, myConceptControlChange, myConceptController, myConceptControllerValuable, myConceptControllerValue, myConceptControllerable, myConceptCopyrightNotice, myConceptCuePoint, myConceptEmptyTrackEvent, myConceptEndOfTrack, myConceptFile, myConceptHeader, myConceptInstrumentName, myConceptKeyCode, myConceptKeySignature, myConceptKeyable, myConceptLyricText, myConceptMarker, myConceptMetaEvent, myConceptMidiChannelPrefixAssignment, myConceptMidiEvent, myConceptNote, myConceptNoteOff, myConceptNoteOn, myConceptPitchWheelChange, myConceptPolyphonicKeyPressure, myConceptPressurable, myConceptPressure, myConceptProgramChange, myConceptSequenceNumber, myConceptSequenceOrTrackName, myConceptSequencerSpecificEvent, myConceptSetTempo, myConceptSmpteOffset, myConceptSysexEvent, myConceptSystemCommonMessage, myConceptSystemExclusiveMessage, myConceptTextEvent, myConceptTicksPerQuarterNote, myConceptTimeSignature, myConceptTimecode, myConceptTrack, myConceptTrackDivision, myConceptTrackEvent, myConceptUnknownMetaEvent, myConceptVelocityValue, myConceptVelocityable);
   }
 
   @Override
@@ -189,6 +190,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptTrackDivision;
       case LanguageConceptSwitch.TrackEvent:
         return myConceptTrackEvent;
+      case LanguageConceptSwitch.UnknownMetaEvent:
+        return myConceptUnknownMetaEvent;
       case LanguageConceptSwitch.VelocityValue:
         return myConceptVelocityValue;
       case LanguageConceptSwitch.Velocityable:
@@ -381,7 +384,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651242187097");
     b.version(3);
     b.property("note_number", 0x7c255ef7567ae95dL).type(PrimitiveTypeId.INTEGER).origin("8945660651242187101").done();
-    b.aggregate("note", 0x585e6537180a3b6aL).target(0x87d1018d30c44219L, 0x852f1bd942b093e8L, 0x7c255ef757c9302aL).optional(true).ordered(true).multiple(false).origin("6367638210449390442").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForKeySignature() {
@@ -705,6 +707,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     b.property("deltaTime", 0x7c255ef7567ae938L).type(PrimitiveTypeId.INTEGER).origin("8945660651242187064").done();
     b.alias("track_event");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForUnknownMetaEvent() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Midi", "UnknownMetaEvent", 0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x3e52dc57ee82e95eL);
+    b.class_(false, false, false);
+    // extends: Midi.structure.MetaEvent
+    b.super_(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef7567ae942L);
+    b.origin("r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048663628126");
+    b.version(3);
+    b.aggregate("byteData", 0x3e52dc57ee82e95fL).target(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x6e18fdd22f867851L).optional(true).ordered(true).multiple(true).origin("4490894048663628127").done();
+    b.alias("unknown_meta_event");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForVelocityValue() {

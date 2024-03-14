@@ -57,8 +57,9 @@ public final class LanguageConceptSwitch {
   public static final int Track = 45;
   public static final int TrackDivision = 46;
   public static final int TrackEvent = 47;
-  public static final int VelocityValue = 48;
-  public static final int Velocityable = 49;
+  public static final int UnknownMetaEvent = 48;
+  public static final int VelocityValue = 49;
+  public static final int Velocityable = 50;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L);
@@ -110,6 +111,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x7c255ef75678a53fL, Track);
     builder.put(0x7c255ef75678a567L, TrackDivision);
     builder.put(0x7c255ef7567ae92aL, TrackEvent);
+    builder.put(0x3e52dc57ee82e95eL, UnknownMetaEvent);
     builder.put(0x7c255ef7567ae964L, VelocityValue);
     builder.put(0x7c255ef7567ae963L, Velocityable);
     myIndex = builder.seal();

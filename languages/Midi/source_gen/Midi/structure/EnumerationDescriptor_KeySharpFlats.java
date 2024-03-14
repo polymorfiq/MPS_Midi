@@ -16,13 +16,23 @@ public class EnumerationDescriptor_KeySharpFlats extends EnumerationDescriptorBa
   }
 
   private final EnumerationDescriptor.MemberDescriptor myMember_flats_7_0 = new EnumerationDescriptor.MemberDescriptor("flats_7", "flats_7", 0x7c255ef756ebb7e5L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651249580005");
-  private final EnumerationDescriptor.MemberDescriptor myMember_flat_1_0 = new EnumerationDescriptor.MemberDescriptor("flat_1", "flat_1", 0x7c255ef756ebb81fL, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651249580063");
+  private final EnumerationDescriptor.MemberDescriptor myMember_flats_6_0 = new EnumerationDescriptor.MemberDescriptor("flats_6", "flats_6", 0x3e52dc57ee359d8dL, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562445");
+  private final EnumerationDescriptor.MemberDescriptor myMember_flats_5_0 = new EnumerationDescriptor.MemberDescriptor("flats_5", "flats_5", 0x3e52dc57ee359d94L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562452");
+  private final EnumerationDescriptor.MemberDescriptor myMember_flats_4_0 = new EnumerationDescriptor.MemberDescriptor("flats_4", "flats_4", 0x3e52dc57ee359d9cL, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562460");
+  private final EnumerationDescriptor.MemberDescriptor myMember_flats_3_0 = new EnumerationDescriptor.MemberDescriptor("flats_3", "flats_3", 0x3e52dc57ee359da5L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562469");
+  private final EnumerationDescriptor.MemberDescriptor myMember_flats_2_0 = new EnumerationDescriptor.MemberDescriptor("flats_2", "flats_2", 0x3e52dc57ee359dafL, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562479");
+  private final EnumerationDescriptor.MemberDescriptor myMember_flats_1_0 = new EnumerationDescriptor.MemberDescriptor("flats_1", "flats_1", 0x3e52dc57ee359dbaL, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562490");
   private final EnumerationDescriptor.MemberDescriptor myMember_key_of_c_0 = new EnumerationDescriptor.MemberDescriptor("key_of_c", "key_of_c", 0x7c255ef756ebb837L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651249580087");
-  private final EnumerationDescriptor.MemberDescriptor myMember_sharp_1_0 = new EnumerationDescriptor.MemberDescriptor("sharp_1", "sharp_1", 0x7c255ef756ebb850L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651249580112");
+  private final EnumerationDescriptor.MemberDescriptor myMember_sharps_1_0 = new EnumerationDescriptor.MemberDescriptor("sharps_1", "sharps_1", 0x7c255ef756ebb850L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651249580112");
+  private final EnumerationDescriptor.MemberDescriptor myMember_sharps_2_0 = new EnumerationDescriptor.MemberDescriptor("sharps_2", "sharps_2", 0x3e52dc57ee359e01L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562561");
+  private final EnumerationDescriptor.MemberDescriptor myMember_sharps_3_0 = new EnumerationDescriptor.MemberDescriptor("sharps_3", "sharps_3", 0x3e52dc57ee359e0dL, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562573");
+  private final EnumerationDescriptor.MemberDescriptor myMember_sharps_4_0 = new EnumerationDescriptor.MemberDescriptor("sharps_4", "sharps_4", 0x3e52dc57ee359e1aL, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562586");
+  private final EnumerationDescriptor.MemberDescriptor myMember_sharps_5_0 = new EnumerationDescriptor.MemberDescriptor("sharps_5", "sharps_5", 0x3e52dc57ee359e28L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562600");
+  private final EnumerationDescriptor.MemberDescriptor myMember_sharps_6_0 = new EnumerationDescriptor.MemberDescriptor("sharps_6", "sharps_6", 0x3e52dc57ee359e37L, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/4490894048658562615");
   private final EnumerationDescriptor.MemberDescriptor myMember_sharps_7_0 = new EnumerationDescriptor.MemberDescriptor("sharps_7", "sharps_7", 0x7c255ef756ebb86aL, "r:b9dd644d-910d-4c92-935c-1cee59d546f7(Midi.structure)/8945660651249580138");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, 0x7c255ef756ebb7e5L, 0x7c255ef756ebb81fL, 0x7c255ef756ebb837L, 0x7c255ef756ebb850L, 0x7c255ef756ebb86aL);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_flats_7_0, myMember_flat_1_0, myMember_key_of_c_0, myMember_sharp_1_0, myMember_sharps_7_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756ebb7e4L, 0x7c255ef756ebb7e5L, 0x3e52dc57ee359d8dL, 0x3e52dc57ee359d94L, 0x3e52dc57ee359d9cL, 0x3e52dc57ee359da5L, 0x3e52dc57ee359dafL, 0x3e52dc57ee359dbaL, 0x7c255ef756ebb837L, 0x7c255ef756ebb850L, 0x3e52dc57ee359e01L, 0x3e52dc57ee359e0dL, 0x3e52dc57ee359e1aL, 0x3e52dc57ee359e28L, 0x3e52dc57ee359e37L, 0x7c255ef756ebb86aL);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_flats_7_0, myMember_flats_6_0, myMember_flats_5_0, myMember_flats_4_0, myMember_flats_3_0, myMember_flats_2_0, myMember_flats_1_0, myMember_key_of_c_0, myMember_sharps_1_0, myMember_sharps_2_0, myMember_sharps_3_0, myMember_sharps_4_0, myMember_sharps_5_0, myMember_sharps_6_0, myMember_sharps_7_0);
 
   @Nullable
   @Override
@@ -45,12 +55,32 @@ public class EnumerationDescriptor_KeySharpFlats extends EnumerationDescriptorBa
     switch (memberName) {
       case "flats_7":
         return myMember_flats_7_0;
-      case "flat_1":
-        return myMember_flat_1_0;
+      case "flats_6":
+        return myMember_flats_6_0;
+      case "flats_5":
+        return myMember_flats_5_0;
+      case "flats_4":
+        return myMember_flats_4_0;
+      case "flats_3":
+        return myMember_flats_3_0;
+      case "flats_2":
+        return myMember_flats_2_0;
+      case "flats_1":
+        return myMember_flats_1_0;
       case "key_of_c":
         return myMember_key_of_c_0;
-      case "sharp_1":
-        return myMember_sharp_1_0;
+      case "sharps_1":
+        return myMember_sharps_1_0;
+      case "sharps_2":
+        return myMember_sharps_2_0;
+      case "sharps_3":
+        return myMember_sharps_3_0;
+      case "sharps_4":
+        return myMember_sharps_4_0;
+      case "sharps_5":
+        return myMember_sharps_5_0;
+      case "sharps_6":
+        return myMember_sharps_6_0;
       case "sharps_7":
         return myMember_sharps_7_0;
     }

@@ -16,7 +16,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -37,16 +36,12 @@ public final class Track__BehaviorDescriptor extends BaseBHDescriptor {
     final Wrappers._int numBytes = new Wrappers._int(0);
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.events$fAV3)).visitAll((evt) -> numBytes.value += (int) ByteSized__BehaviorDescriptor.byte_size_id7K_nJtmDrJf.invoke(evt));
 
-    int endOfTrackLen = (int) ByteSized__BehaviorDescriptor.byte_size_id7K_nJtmDrJf.invoke(SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e30ce1L, "Midi.structure.EndOfTrack")));
-    numBytes.value += endOfTrackLen;
-
     byte[] trkLen = BinaryHelper.numRep32(numBytes.value);
 
     return 4 + trkLen.length + numBytes.value;
   }
   /*package*/ static byte[] bytes_id7K_nJtmDrGV(@NotNull SNode __thisNode__) {
     final byte[] bytes = new byte[((int) ByteSized__BehaviorDescriptor.byte_size_id7K_nJtmDrJf.invoke(__thisNode__))];
-    byte[] endOfTrack = ByteSized__BehaviorDescriptor.bytes_id7K_nJtmDrGV.invoke(SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x35a3fd90d0264551L, 0xaa863ed1bd51d7c6L, 0x7c255ef756e30ce1L, "Midi.structure.EndOfTrack")));
 
     final Wrappers._int i = new Wrappers._int(0);
     System.arraycopy("MTrk".getBytes(), 0, bytes, i.value, 4);
@@ -54,7 +49,6 @@ public final class Track__BehaviorDescriptor extends BaseBHDescriptor {
 
     final Wrappers._int numBytes = new Wrappers._int(0);
     ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.events$fAV3)).visitAll((evt) -> numBytes.value += (int) ByteSized__BehaviorDescriptor.byte_size_id7K_nJtmDrJf.invoke(evt));
-    numBytes.value += endOfTrack.length;
 
     byte[] trkLen = BinaryHelper.numRep32(numBytes.value);
     System.arraycopy(trkLen, 0, bytes, i.value, trkLen.length);
@@ -65,8 +59,6 @@ public final class Track__BehaviorDescriptor extends BaseBHDescriptor {
       System.arraycopy(evtBytes, 0, bytes, i.value, evtBytes.length);
       i.value += evtBytes.length;
     });
-
-    System.arraycopy(endOfTrack, 0, bytes, i.value, endOfTrack.length);
 
     return bytes;
   }

@@ -57,6 +57,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Track;
   private ConceptPresentation props_TrackDivision;
   private ConceptPresentation props_TrackEvent;
+  private ConceptPresentation props_UnknownMetaEvent;
   private ConceptPresentation props_VelocityValue;
   private ConceptPresentation props_Velocityable;
 
@@ -397,6 +398,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TrackEvent = cpb.create();
         }
         return props_TrackEvent;
+      case LanguageConceptSwitch.UnknownMetaEvent:
+        if (props_UnknownMetaEvent == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("unknown_meta_event");
+          props_UnknownMetaEvent = cpb.create();
+        }
+        return props_UnknownMetaEvent;
       case LanguageConceptSwitch.VelocityValue:
         if (props_VelocityValue == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

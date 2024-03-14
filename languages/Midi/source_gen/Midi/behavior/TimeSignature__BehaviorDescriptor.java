@@ -59,7 +59,7 @@ public final class TimeSignature__BehaviorDescriptor extends BaseBHDescriptor {
     byte dd = (byte) SPropertyOperations.getInteger(__thisNode__, PROPS.denominator$oQ55);
     byte cc = (byte) SPropertyOperations.getInteger(__thisNode__, PROPS.midi_clocks_per_metronome_click$p5l6);
     byte bb = (byte) SPropertyOperations.getInteger(__thisNode__, PROPS.thirty_second_notes_in_quarter_note$pR4q);
-    System.arraycopy(new byte[]{nn, dd, cc, bb}, 0, bytes, i, 5);
+    System.arraycopy(new byte[]{nn, dd, cc, bb}, 0, bytes, i, 4);
 
     return bytes;
   }
